@@ -1,0 +1,442 @@
+
+     /* Doctor Card Styles */
+     .doctor-card {
+      margin: 2rem auto 0;
+      background-color: rgba(255, 255, 255, 0.73);
+      padding: 1.5rem;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .doctor-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #7ea17c;
+    }
+
+    .doctor-info h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      color: #3b3b3b;
+    }
+
+    .doctor-info p {
+      margin: 0.3rem 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f6f1;
+      color: #3b3b3b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #5e8b7e, #7fae99);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+     animation: fadeIn 2s ease forwards;
+     background-image: url("ChatGPT\ Image\ Apr\ 16\,\ 2025\,\ 08_21_27\ AM.png"); /* adjust path if needed */
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     text-align: center;
+     padding: 2rem;
+     position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(77, 77, 77, 0.5); /* dark overlay for better readability */
+      z-index: 1;
+    }
+    
+    .hero * {
+      z-index: 2;
+      position: relative;
+    }
+    
+    .hero h2 {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero .btn {
+      background-color: #a8c66c;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: #94b85f;
+    }
+
+    section {
+      padding: 2rem 1rem;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .featured-products .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      animation: fadeIn 1.2s ease-in;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .product-card {max-width: 310px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #7ea17c;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .product-card a:hover {
+      background-color: #688b66;
+    }
+
+    .benefits .benefit-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .benefit {
+      background-color: #d4e4c5;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      min-width: 150px;
+      text-align: center;
+      flex: 1 1 150px;
+    }
+
+    .about, .blog {
+      background-color: #f0eee9;
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      margin: auto;
+    }
+
+    .blog ul li {
+      margin: 0.5rem 0;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #5e8b7e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #d4e4c5;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
+        width: 100%;
+        background-color: #5e8b7e;
+        margin-top: 1rem;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+ 
+  @media (max-width: 768px) {
+  .doctor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+   justify-content: center;
+  }
+
+  .hero-buttons .btn {
+    width: auto;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+    .featured-products h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      animation: fadeIn 1.2s ease-in;
+      justify-content: space-evenly;
+    }
+
+    .product-card {
+      background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  width: 260px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+    .product-card img {
+      width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+      
+    }
+
+    .product-card h4 {
+      margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+    }
+
+    .product-card p {
+      font-size: 16px;
+  font-weight: bold;
+  color: #444;
+
+      
+    }
+
+    .product-card a {
+      background-color: #25D366;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+    }
+
+    .product-card a:hover {
+      background-color: #3e9142;
+    }
+
+    footer {
+      background: #388E3C;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
