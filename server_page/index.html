@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>आयुर्वेदिक सेवा</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefef9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e6e4c;
+      margin-bottom: 20px;
+    }
+
+    .treatment-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .treatment-links a {
+      padding: 10px 15px;
+      background-color: #e0f3e5;
+      color: #2e6e4c;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .treatment-links a:hover {
+      background-color: #c2e4cb;
+    }
+
+    .treatment-container {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .treatment-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .treatment-title {
+      color: #2e6e4c;
+    }
+
+  .back-to-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2e6e4c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 999;
+    font-size: larger;
+  }
+  .Contact
+  {
+    display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;
+  }
+  .Contact a
+  {
+    background-color: #62ff9c; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .Contact a:hover
+  {
+    background-color: #29e26d;
+  }
+
+  .back-to-index:hover {
+    background-color: #439e6c;
+  }
+  footer 
+  {
+      background-color: #fefef9;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a 
+    {
+      color: #454a40;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>उपलब्ध सेवा</h1>
+
+    <div class="treatment-links">
+      <a href="#diabetes"> मधुमेह</a>
+      <a href="#thyroid">थायरॉईड</a>
+      <a href="#bp">उच्च रक्तदाब</a>
+      <a href="#heart">हृदय विकार</a>
+      <a href="#liver">यकृत विकार</a>
+      <a href="#cancer">कॅन्सर</a>
+      <a href="#asthma">अस्थमा</a>
+      <a href="#kidney">किडनीचे आजार</a>
+      <a href="#obesity">स्थूलपणा</a>
+      <a href="#height">उंची वाढविणे</a>
+      <a href="#weight">वजन वाढविणे</a>
+      <a href="#skin">त्वचा विकार</a>
+      <a href="#piles">मूळव्याध, भगंदर</a>
+      <a href="#womenIssues">स्त्रियांचे आजार</a>
+      <a href="#arthritis">सांधेवात वात</a>
+      <a href="#rheumatoid">आमवात</a>
+      <a href="#sciatica">साइटिका</a>
+      <a href="#infertility">बंध्यता</a>
+      <a href="#kids">लहान मुलांचे आजार</a>
+      <a href="#garbhsanskar">गर्भसंस्कार</a>
+      <a href="#hair">केसां संबंधित समस्या</a>
+      <a href="#ascitis">असायटिस</a>
+      <a href="#mental">मानसिक रोग</a>
+      <a href="#women">स्त्रीरोग</a>
+      <a href="#rasayan">रसायन चिकित्सा</a>
+      <a href="#allergy">एलर्जी</a>
+      <a href="#stomach">पोटाचे विकार</a>
+    </div>
+    <br>
+
+    <!-- Contact and Appointment Buttons -->
+<div class="Contact" >
+  <!-- Call Button -->
+  <a href="tel:+918530912184">
+    📞 Contact Us
+  </a>
+
+  <!-- WhatsApp Appointment Button -->
+  <a href="https://wa.me/917620795259?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Ayurvedic%20treatment."
+     target="_blank" >
+    💬 Book Appointment
+  </a>
+
+
+
+
+</div>
+
+
+   
+  <script>
+    document.querySelectorAll(".treatment-links a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+  <!-- Floating Back to Index Button -->
+  <footer>
+    <p>&copy; 2025 ASHAYURVED
+      SUPER SPECIALITY CLINIC. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    <p>Made with ❤️ by Saurav V Shinde</p>
+  </footer>
+</body>
+</html>
