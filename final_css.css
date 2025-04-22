@@ -142,11 +142,11 @@
       height: 100%;
       width: 100%;
       background: rgba(77, 77, 77, 0.5); /* dark overlay for better readability */
-      z-index: 1;
+      
     }
     
     .hero * {
-      z-index: 2;
+      z-index: 1;
       position: relative;
     }
     
