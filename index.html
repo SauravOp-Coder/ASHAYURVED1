@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ASHAYURVED</title>
  <link href="final_css.css" rel="stylesheet">
+  <style>
+  .doctor-card {
+      position: relative;
+      width: fit-content;
+      max-width: 500px;
+      margin:  auto;
+    }
+    .doctor-card h2 {
+      color: rgb(79, 79, 79);
+    }
+
+    .doctor-card .image {
+      display: block;
+      justify-content: center;
+      margin-left: 50%;
+      margin-right: 50%;
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .doctor-info {
+      position: absolute;
+      top: 100%; /* right below the image */
+      left: 0;
+      width: 100%;
+      background:  rgba(255, 255, 255, 0.73);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    .doctor-card:hover .doctor-info {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    @media (max-width: 480px) {
+      .card {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+ </style>
 </head>
 <script>
   function toggleMenu() {
