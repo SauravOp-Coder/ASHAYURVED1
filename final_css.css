@@ -3,9 +3,9 @@
      .doctor-card {
       margin: 2rem auto 0;
       background-color: rgba(255, 255, 255, 0.73);
-      padding: 1.5rem;
+      padding: 1.rem;
       border-radius: 16px;
-      max-width: 500px;
+      max-width: 490px;
       width: 90%;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       display: flex;
