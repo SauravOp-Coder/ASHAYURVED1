@@ -1,7 +1,8 @@
 
      /* Doctor Card Styles */
      .doctor-card {
-      margin: 1.5rem auto 0;
+          margin-top: 40px;
+      margin: auto ;
       background-color: rgba(255, 255, 255, 0.73);
       padding: 1rem;
       border-radius: 16px;
