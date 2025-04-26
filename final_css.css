@@ -312,7 +312,7 @@ z-index: 15;
     }
 
     footer {
-      background-color: #5e8b7e;
+      background-color:#f2a100;
       color: white;
       text-align: center;
       padding: 1rem;
@@ -422,7 +422,7 @@ z-index: 15;
     }
 
     .product-card a {
-      background-color: #25D366;
+      background-color:#f2a100;
   color: white;
   padding: 8px 12px;
   border: none;
