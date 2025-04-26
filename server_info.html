@@ -65,20 +65,22 @@
       color: #2e6e4c;
     }
 
-  .back-to-index {
+  .floating-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2e6e4c;
+    background-color: #6200ea; /* violet color */
     color: white;
-    padding: 10px 14px;
+    padding: 12px 20px;
     border-radius: 50px;
     text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
-    z-index: 999;
-    font-size: larger;
+  }
+
+  .floating-button:hover {
+    background-color: #3700b3;
   }
   .Contact
   {
@@ -93,9 +95,7 @@
     background-color: #29e26d;
   }
 
-  .back-to-index:hover {
-    background-color: #439e6c;
-  }
+
   footer 
   {
       background-color: #fefef9;
@@ -1521,6 +1521,7 @@ The tract is cut slowly while simultaneously healing from behind, leaving minima
     });
   </script>
   <!-- Floating Back to Index Button -->
+    <a href="index.html" class="floating-button">Back to Index</a>
   <footer>
     <p>&copy; 2025 ASHAYURVED
       SUPER SPECIALITY CLINIC. All Rights Reserved.</p>
