@@ -65,6 +65,34 @@
       color: #2e6e4c;
     }
 
+  .back-to-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2e6e4c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 999;
+    font-size: larger;
+  }
+  .Contact
+  {
+    display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;
+  }
+  .Contact a
+  {
+    background-color: #62ff9c; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .Contact a:hover
+  {
+    background-color: #29e26d;
+  }
+
   .floating-button {
     position: fixed;
     bottom: 20px;
@@ -82,19 +110,6 @@
   .floating-button:hover {
     background-color: #3700b3;
   }
-  .Contact
-  {
-    display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;
-  }
-  .Contact a
-  {
-    background-color: #62ff9c; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .Contact a:hover
-  {
-    background-color: #29e26d;
-  }
-
 
   footer 
   {
@@ -119,7 +134,8 @@
             padding: 30px;
             text-align: center;
         }
-     .treatment-container {
+
+        .treatment-container {
             background-color: #ffffff;
             margin-bottom: 40px;
             padding: 25px;
@@ -175,9 +191,8 @@
     <br>
     <div class="container">
       
-      <!-- Treatment 1 -->
       <div id="vaman" class="treatment-container">
-          <h2 class="treatment-title">वमन</h2>
+          <h2 class="treatment-title">Vaman/वमन</h2>
           <img src="treantement images/VAMAN.jpg" alt="Vaman">
           <p class="treatment-description">
               Vaman (or Vamana Karma) is one of the five detoxification therapies in Panchakarma—a core part of Ayurvedic medicine. It refers to therapeutic emesis, or medically induced vomiting, and is used to eliminate excess Kapha dosha from the body.
@@ -202,9 +217,8 @@
           </p>
       </div>
 
-      <!-- Treatment 2 -->
       <div id="abhyang" class="treatment-container">
-          <h2 class="treatment-title">आयुर्वेदिक फेशियल</h2>
+          <h2 class="treatment-title">Ayurvedic Facial/आयुर्वेदिक फेशियल</h2>
           <img src="treantement images/AYURVEDIC FACIAL.jpg" alt="Facial">
           <p class="treatment-description">
               An Ayurvedic facial is a rejuvenating skincare therapy that uses natural, herbal, and plant-based ingredients customized to your dosha (body constitution—Vata, Pitta, or Kapha). This gentle yet effective facial focuses on cleansing, exfoliating, nourishing, and balancing the skin using traditional Ayurvedic techniques.
@@ -238,9 +252,8 @@ Enhances mental relaxation and emotional balance
           </p>
       </div>
 
-      <!-- Treatment 3 -->
       <div id="janubasti" class="treatment-container">
-          <h2 class="treatment-title">अभ्यंग</h2>
+          <h2 class="treatment-title">Abhyanga/अभ्यंग</h2>
           <img src="treantement images/ABHYANGA.jpg" alt="Abhyanga">
           <p class="treatment-description">
               Abhyanga is a traditional Ayurvedic full-body massage that uses warm, medicated oils tailored to your dosha (body constitution). This deeply nourishing therapy is designed to balance the body's energies, promote circulation, and support detoxification.
@@ -274,10 +287,8 @@ Enhances mental relaxation and emotional balance
           </p>
       </div>
 
-      <!-- Add more treatments below in same format -->
-
       <div id="janubasti2" class="treatment-container">
-          <h2 class="treatment-title">जानु बस्ती</h2>
+          <h2 class="treatment-title">Janu Basti/जानु बस्ती</h2>
           <img src="treantement images/JANU BASTI.jpg" alt="Janubasti">
           <p class="treatment-description">
 
@@ -324,9 +335,8 @@ Increases mobility and flexibility
           </p>
       </div>
 
-      <!-- Continue adding remaining treatments... -->
       <div id="meenoPanchakarma1" class="treatment-container">
-          <h2 class="treatment-title">मीनो पञ्चकर्म
+          <h2 class="treatment-title">Meeno Panchakarma/मीनो पञ्चकर्म
           </h2>
           <img src="treantement images/MINI PANCHAKARMA.jpg" alt="MINI PANCHAKARMA">
           <p class="treatment-description">
@@ -379,7 +389,7 @@ Typically ranges from 3 to 7 days, depending on the person's constitution and h
       </div>
 
       <div id="virchan" class="treatment-container">
-          <h2 class="treatment-title">विरचन
+          <h2 class="treatment-title">Virechan/विरचन
           </h2>
           <img src="treantement images/VIRECHANAM.jpg" alt="VIRECHANAM">
           <p class="treatment-description">
@@ -396,7 +406,7 @@ Typically ranges from 3 to 7 days, depending on the person's constitution and h
       </div>
 
       <div id="bodyPolishing" class="treatment-container">
-          <h2 class="treatment-title">बॉडी पलिशिंग </h2>
+          <h2 class="treatment-title">Body Polishing/बॉडी पलिशिंग </h2>
           <img src="treantement images/BODY POLISHING.jpg" alt="BODY POLISHING">
           <p class="treatment-description">
               BODY POLISHING
@@ -431,7 +441,7 @@ Typically ranges from 3 to 7 days, depending on the person's constitution and h
       </div>
 
       <div id="swedan" class="treatment-container">
-          <h2 class="treatment-title">स्वेदन </h2>
+          <h2 class="treatment-title">Swedan/स्वेदन </h2>
           <img src="treantement images/SWEDAN.jpg" alt="Netra Tarpan">
           <p class="treatment-description">
               Swedana (or Swedan) Treatment is a traditional Ayurvedic therapy that involves inducing sweating through steam or heat to detoxify the body. It is commonly used as a preparatory procedure (Purvakarma) before main detox therapies like Panchakarma.
@@ -502,7 +512,7 @@ Promotes relaxation and mental clarity <br>
       </div>
 
       <div id="katiBasti" class="treatment-container">
-          <h2 class="treatment-title">कटि बस्ती</h2>
+          <h2 class="treatment-title">Kati Basti/कटि बस्ती</h2>
           <img src="treantement images/KATI BASTI.jpg" alt="KATI BASTI">
           <p class="treatment-description">
               Kati Basti is a specialized Ayurvedic therapy focused on treating lower back pain and disorders of the lumbar-sacral region. The word "Kati" means lower back, and "Basti" refers to a container or retaining structure used to hold warm medicated oil over a specific area.
@@ -530,7 +540,7 @@ Promotes relaxation and mental clarity <br>
       </div>
 
       <div id="karnPuran" class="treatment-container">
-          <h2 class="treatment-title">कर्ण पूरण</h2>
+          <h2 class="treatment-title">Karna Puran/कर्ण पूरण</h2>
           <img src="treantement images/KARNA PURAN.jpg" alt="KARNA PURAN">
           <p class="treatment-description">
               Karna Purana is a traditional Ayurvedic procedure where warm medicated oil is gently poured into the ears. The Sanskrit word "Karna" means ear, and "Purana" means filling. It is used both therapeutically and preventively.
@@ -563,7 +573,7 @@ Promotes relaxation and mental clarity <br>
       </div>
 
       <div id="garbhSanskar" class="treatment-container">
-          <h2 class="treatment-title">गर्भ संस्कार</h2>
+          <h2 class="treatment-title">Garbha Sanskar/गर्भ संस्कार</h2>
           <img src="treantement images/GARBHA SANSKAR.jpg"   alt="Garbha Sanskar">
           <p class="treatment-description">
               Garbha Sanskar is an ancient Indian prenatal practice focused on the mental, emotional, spiritual, and physical well-being of the mother and the unborn child. The term "Garbha Sanskar" literally means "educating the fetus in the womb."
@@ -634,7 +644,7 @@ Maintaining a positive, stress-free environment
       </div>
 
       <div id="nasy" class="treatment-container">
-          <h2 class="treatment-title">नस्य</h2>
+          <h2 class="treatment-title">Nasya/नस्य</h2>
           <img src="treantement images/NASYA.jpg" alt="Nasya" >
           <p class="treatment-description">
              <h3>Benefits of Nasya</h3>
@@ -672,7 +682,7 @@ Maintaining a positive, stress-free environment
       </div>
 
       <div id="shirolepam" class="treatment-container">
-          <h2 class="treatment-title">शिरोलेपम</h2>
+          <h2 class="treatment-title">Shirolepam/शिरोलेपम</h2>
           <img src="treantement images/SHIROLEPAM.jpg" alt="SHIROLEPAM">
           <p class="treatment-description">
               
@@ -716,7 +726,7 @@ Maintaining a positive, stress-free environment
       </div>
 
       <div id="shirodhara" class="treatment-container">
-          <h2 class="treatment-title">शिरोधारा</h2>
+          <h2 class="treatment-title">Shirodhara/शिरोधारा</h2>
           <img src="treantement images/SHIRODHARA.jpg" alt="SHIRODHARA">
           <p class="treatment-description">
   
@@ -792,7 +802,7 @@ Helps release suppressed emotions and improves emotional resilience.
       </div>
 
       <div id="grivaBasti" class="treatment-container">
-          <h2 class="treatment-title">ग्रीवा बस्ती</h2>
+          <h2 class="treatment-title">Griva Basti/ग्रीवा बस्ती</h2>
           <img src="treantement images/GREEVA BASTI.jpg" alt="GREEVA BASTI">
           <p class="treatment-description">
               Greeva Basti (also known as Griva Basti) is a traditional Ayurvedic therapy designed to address neck-related ailments. The term "Greeva" refers to the neck, and "Basti" means to retain or hold. In this treatment, warm medicated oil is retained on the cervical region using a dough dam, allowing the therapeutic properties of the oil to penetrate deeply into the tissues.
@@ -828,7 +838,7 @@ The medicated oils used in Greeva Basti nourish the muscles, bones, and nerves o
       </div>
 
       <div id="agnikarma" class="treatment-container">
-          <h2 class="treatment-title">अग्निकर्म</h2>
+          <h2 class="treatment-title">Agnikarma/अग्निकर्म</h2>
           <img src="treantement images/AGNIKARMA.jpg" alt="AGNIKARMA">
           <p class="treatment-description">
               Agnikarma is an ancient Ayurvedic therapeutic procedure that involves the controlled application of heat or thermal cauterization to treat various diseases, especially musculoskeletal and chronic pain conditions. It is often used when other treatments like oral medications or Panchakarma are not effective.
@@ -846,7 +856,7 @@ The medicated oils used in Greeva Basti nourish the muscles, bones, and nerves o
           </p>
       </div>
       <div id="swarnPrashan"class="treatment-container">
-          <h2 class="treatment-title">स्वर्ण प्राशन</h2>
+          <h2 class="treatment-title">Swarn Prashan/स्वर्ण प्राशन</h2>
           <img src="treantement images/SWARNAPRASHAN.jpg" alt="SWARNAPRASHAN">
           <p class="treatment-description">
               Swarnaprashan is an ancient Ayurvedic practice where a preparation containing purified gold (Suvarna Bhasma), honey, ghee, and herbal extracts is administered to children. It's typically given on Pushya Nakshatra days, considered highly auspicious in Ayurveda.
@@ -886,7 +896,7 @@ The medicated oils used in Greeva Basti nourish the muscles, bones, and nerves o
           </p>
       </div>
       <div id="basti" class="treatment-container">
-          <h2 class="treatment-title">बस्ती </h2>
+          <h2 class="treatment-title">Basti/बस्ती </h2>
           <img src="treantement images/BASTI.jpg" alt="BASTI">
           <p class="treatment-description">
               Basti is one of the five main therapies of Panchakarma in Ayurveda, primarily focused on cleansing and rejuvenating the colon. It's often called the "king of treatments" in Ayurveda because of its wide-ranging benefits for both detoxification and nourishment. Here are some key benefits of Basti treatment:
@@ -944,7 +954,7 @@ Regular Basti therapy is believed to slow aging, boost vitality, and enhance ove
           </p>
       </div>
       <div id="detox" class="treatment-container">
-          <h2 class="treatment-title">डिटॉक्स</h2>
+          <h2 class="treatment-title">Detox/डिटॉक्स</h2>
           <img src="treantement images/DETOXIFICATION.jpg" alt="DETOXIFICATION">
           <p class="treatment-description">
               Detoxification—whether through Ayurveda, nutrition, or lifestyle changes—offers a wide range of benefits for physical, mental, and emotional well-being. Here's a breakdown of the top detox 
@@ -1026,7 +1036,7 @@ Detoxing isn't just physical—many experience emotional shifts, improved mood, 
           </p>
       </div>
       <div id="potliShek" class="treatment-container">
-          <h2 class="treatment-title">पोटलीशेक </h2>
+          <h2 class="treatment-title">Potli Shek/पोटलीशेक </h2>
           <img src="treantement images/POTLI SEK.jpg" alt="POTLI SEK">
           <p class="treatment-description">
               Potli Sek/Sveda is a traditional Ayurvedic therapy where herbal pouches (potlis) filled with healing herbs are heated and massaged over the body. It's commonly used for pain relief, detox, and rejuvenation.
@@ -1097,7 +1107,7 @@ Leaves the body feeling light, refreshed, and rejuvenated—good for regular wel
       </div>
      
       <div id="PRISHTA_BASTI" class="treatment-container">
-          <h2 class="treatment-title">पृष्ट बस्ती </h2>
+          <h2 class="treatment-title">Prishta Basti/पृष्ट बस्ती </h2>
           <img src="treantement images/PRISHTA BASTI.jpg" alt=" Prishta Basti">
           <p class="treatment-description">
              
@@ -1132,7 +1142,7 @@ in maintaining the natural curvature of the spine, preventing postural issues.
       </div>
 
       <div id="UTTARA_BASTI" class="treatment-container">
-          <h2 class="treatment-title">उत्तर बस्ती</h2>
+          <h2 class="treatment-title">Uttara Basti/उत्तर बस्ती</h2>
           <img src="treantement images/UTTARA BASTI.jpg" alt=" UTTARA BASTI">
           <p class="treatment-description">
              
@@ -1196,7 +1206,7 @@ Enhances the vitality (Ojas) of the individual.
       </div>
 
       <div id="DIET" class="treatment-container">
-          <h2 class="treatment-title">आहार</h2>
+          <h2 class="treatment-title">Diet/आहार</h2>
           <img src="treantement images/DIET.jpg" alt="DIET">
           <p class="treatment-description">
               1. Improved Energy Levels
@@ -1232,7 +1242,7 @@ Studies link healthy eating habits with increased longevity and quality of lif
       </div>
       
       <div id="RAKTAMOKSHAN" class="treatment-container">
-          <h2 class="treatment-title">रक्तमोक्षण</h2>
+          <h2 class="treatment-title">Raktamokshan/रक्तमोक्षण</h2>
           <img src="treantement images/RAKTAMOKSHAN.jpg" alt="RAKTAMOKSHAN">
           <p class="treatment-description">
               Raktamokshan, or bloodletting, is one of the five Panchakarma therapies in Ayurveda. It's used to purify the blood and eliminate toxins, especially in disorders where vitiated blood (Dushta Rakta) is believed to be the root cause.
@@ -1272,7 +1282,7 @@ With toxins removed, many people report clearer, healthier skin.
       </div>
 
       <div id="RASAYANA_THERAPY" class="treatment-container">
-          <h2 class="treatment-title">रसायन</h2>
+          <h2 class="treatment-title">Rasayana Therapy/रसायन</h2>
           <img src="treantement images/RASAYANA THERAPY.jpg" alt=" RASAYANA THERAPY
           ">
           <p class="treatment-description">
@@ -1324,7 +1334,7 @@ Rasayana herbs like Brahmi and Ashwagandha reduce stress and anxiety
       </div>
 
       <div id="UDVARTHANAM" class="treatment-container">
-          <h2 class="treatment-title">उदवर्तन </h2>
+          <h2 class="treatment-title">Udvarthanam/उदवर्तन </h2>
           <img src="treantement images/UDVARTHANAM.jpg" alt="Udvarthanam">
           <p class="treatment-description">
               
@@ -1366,7 +1376,7 @@ Has a stimulating and refreshing effect on the body and mind.
       </div>
 
       <div id="HRUD_BASTI" class="treatment-container">
-          <h2 class="treatment-title">ह्रदय बस्ती </h2>
+          <h2 class="treatment-title">Hrud Basti/ह्रदय बस्ती </h2>
           <img src="treantement images/HRUD BASTI.jpg" alt=" HRUD BASTI">
           <p class="treatment-description">
              
@@ -1421,7 +1431,7 @@ Preventive heart care and rejuvenation
       </div>
 
       <div id="KSHAR_SUTRA" class="treatment-container">
-          <h2 class="treatment-title">क्षारसुत्र</h2>
+          <h2 class="treatment-title">Kshar Sutra/क्षारसुत्र</h2>
           <img src="treantement images/KSHAR SUTRA.jpg" alt="क्षारसुत्र ">
           <p class="treatment-description">
 
@@ -1501,10 +1511,6 @@ The tract is cut slowly while simultaneously healing from behind, leaving minima
   <a href="tel:+918530912184">
     📞 Contact Us
   </a>
-
-
-
-
 </div>
 
 
@@ -1521,7 +1527,7 @@ The tract is cut slowly while simultaneously healing from behind, leaving minima
     });
   </script>
   <!-- Floating Back to Index Button -->
-    <a href="server_info.html" class="floating-button">Back to Index</a>
+  <a href="server_info.html" class="floating-button">Back to Index</a>
   <footer>
     <p>&copy; 2025 ASHAYURVED
       SUPER SPECIALITY CLINIC. All Rights Reserved.</p>
@@ -1530,5 +1536,3 @@ The tract is cut slowly while simultaneously healing from behind, leaving minima
   </footer>
 </body>
 </html>
-
-
