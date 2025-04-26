@@ -1,138 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ayurvedic Treatments</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>आयुर्वेदिक सेवा</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefef9;
+      color: #333;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f9f8f3;
-            color: #333;
-        }
+    h1 {
+      text-align: center;
+      color: #2e6e4c;
+      margin-bottom: 20px;
+    }
 
-        /* Layout */
-        .main-layout {
-            display: flex;
-        }
+    .treatment-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
 
-        .sidebar {
-            width: 250px;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            background-color: #f1f3ec;
-            padding: 20px;
-            border-right: 2px solid #d1d9c4;
-            overflow-y: auto;
-        }
+    .treatment-links a {
+      padding: 10px 15px;
+      background-color: rgb(248, 174, 110);
+      color: #000000;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
 
-        .sidebar h2 {
-            font-size: 22px;
-            color: #3a5f3a;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+    .treatment-links a:hover {
+      background-color:  rgb(212, 152, 99);
+    }
 
-        .sidebar ul {
-            list-style: none;
-        }
+    .treatment-container {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    }
 
-        .sidebar ul li {
-            margin-bottom: 12px;
-        }
+    .treatment-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
 
-        .sidebar ul li a {
-            color: #3a5f3a;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+    .treatment-title {
+      color: #2e6e4c;
+    }
 
-        .sidebar ul li a:hover {
-            color: #2d4d2d;
-            text-decoration: underline;
-        }
+  .back-to-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2e6e4c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 999;
+    font-size: larger;
+  }
+  .Contact
+  {
+    display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;
+  }
+  .Contact a
+  {
+    background-color: #62ff9c; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .Contact a:hover
+  {
+    background-color: #29e26d;
+  }
 
-        /* Main Content */
-        .container {
-            flex: 1;
-            padding: 30px;
-            text-align: center;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #4e774e;
-            letter-spacing: 1px;
-        }
-
-        .treatment-container {
-            background-color: #ffffff;
-            margin-bottom: 40px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .treatment-title {
-            font-size: 28px;
-            color: #4e774e;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .treatment-description {
-            font-size: 17px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .treatment-container img {
-            width: 100%;
-            max-width: 500px;
-            height: 290px;
-            border-radius: 8px;
-            margin: 20px 0;
-            transition: transform 0.3s ease;
-        }
-        
-
-        .treatment-container img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .main-layout {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: static;
-                border-right: none;
-                border-bottom: 2px solid #ccc;
-            }
-
-            .container {
-                padding: 20px;
-            }
-        }
-        footer {
+  .back-to-index:hover {
+    background-color: #439e6c;
+  }
+  footer 
+  {
       background-color: #fefef9;
       color: rgb(0, 0, 0);
       text-align: center;
@@ -140,96 +105,97 @@
       margin-top: 2rem;
     }
 
-    footer a {
+    footer a 
+    {
       color: #454a40;
       text-decoration: none;
       margin: 0 0.5rem;
     }
-    .list-style
-    {
-        text-align: left;
-    }
-    
-    </style>
+
+
+
+    .container {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+        }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Ayurvedic Treatments</h1>
 
-    <div class="main-layout">
-        <nav class="sidebar">
-            <h2>Treatments</h2>
-            <ul>
-                <li><a href="#vaman">वमन</a></li>
-                <li><a href="#abhyang">आयुर्वेदिक फेशियल</a></li>
-                <li><a href="#janubasti">अभ्यंग</a></li>
-                <li><a href="#janubasti2">जानु बस्ती</a></li>
-                <li><a href="#meenoPanchakarma">नेत्रतर्पण</a></li>
-                <li><a href="#meenoPanchakarma1">मीनो पञ्चकर्म</a></li>
-                <li><a href="#virchan">विरचन</a></li>
-                <li><a href="#bodyPolishing">बॉडी पोलिशिंग</a></li>
-                <li><a href="#swedan">स्वेदन</a></li>
-                <li><a href="#katiBasti">कटि बस्ती</a></li>
-                <li><a href="#karnPuran">कर्ण पूरण</a></li>
-                <li><a href="#garbhSanskar">गर्भ संस्कार</a></li>
-                <li><a href="#nasy">नस्य</a></li>
-                <li><a href="#shirolepam">शिरोलेपम</a></li>
-                <li><a href="#shirodhara">शिरोधारा</a></li>
-                <li><a href="#grivaBasti">ग्रीवा बस्ती</a></li>
-                <li><a href="#agnikarma">अग्निकर्म</a></li>
-                <li><a href="#swarnPrashan">स्वर्ण प्राशन</a></li>
-                
-                
-                <li><a href="#basti">बस्ती</a></li>
-                <li><a href="#detox">डिटॉक्स</a></li>
-                <li><a href="#potliShek">पोटली शेक</a></li>
+    <p>Note - click on treatment's given below for more Details...</p>
 
-                <li><a href="#PRISHTA_BASTI">पृष्ट बस्ती </a></li>
-                <li><a href="#UTTARA_BASTI">उत्तर बस्ती </a></li>
-                <li><a href="#DIET">आहार</a></li>
-                <li><a href="#RAKTAMOKSHAN">रक्तमोक्षण </a></li>
-                <li><a href="#RASAYANA_THERAPY">रसायन</a></li>
-                <li><a href="#UDVARTHANAM">उदवर्तन</a></li>
-                <li><a href="#HRUD_BASTI">ह्रदय बस्ती </a></li>
-                <li><a href="#KSHAR_SUTRA">क्षारसुत्र</a></li>
+    <div class="treatment-links">
+     
+      <a href="#vaman">वमन</a>
+      <a href="#abhyang">आयुर्वेदिक फेशियल</a>
+      <a href="#janubasti">अभ्यंग</a>
+      <a href="#janubasti2">जानु बस्ती</a>
+      <a href="#meenoPanchakarma">नेत्रतर्पण</a>
+      <a href="#meenoPanchakarma1">मीनो पञ्चकर्म</a>
+      <a href="#virchan">विरचन</a>
+      <a href="#bodyPolishing">बॉडी पोलिशिंग</a>
+      <a href="#swedan">स्वेदन</a>
+      <a href="#katiBasti">कटि बस्ती</a>
+      <a href="#karnPuran">कर्ण पूरण</a>
+      <a href="#garbhSanskar">गर्भ संस्कार</a>
+      <a href="#nasy">नस्य</a>
+      <a href="#shirolepam">शिरोलेपम</a>
+      <a href="#shirodhara">शिरोधारा</a>
+      <a href="#grivaBasti">ग्रीवा बस्ती</a>
+      <a href="#agnikarma">अग्निकर्म</a>
+      <a href="#swarnPrashan">स्वर्ण प्राशन</a>
+      <a href="#basti">बस्ती</a>
+      <a href="#detox">डिटॉक्स</a>
+      <a href="#potliShek">पोटली शेक</a>
+      <a href="#PRISHTA_BASTI">पृष्ट बस्ती </a>
+      <a href="#UTTARA_BASTI">उत्तर बस्ती </a>
+      <a href="#DIET">आहार</a>
+      <a href="#RAKTAMOKSHAN">रक्तमोक्षण </a>
+      <a href="#RASAYANA_THERAPY">रसायन</a>
+      <a href="#UDVARTHANAM">उदवर्तन</a>
+      <a href="#HRUD_BASTI">ह्रदय बस्ती </a>
+      <a href="#KSHAR_SUTRA">क्षारसुत्र</a>
+    
+    </div>
+    <br>
+    <div class="container">
+      
+      <!-- Treatment 1 -->
+      <div id="vaman" class="treatment-container">
+          <h2 class="treatment-title">वमन</h2>
+          <img src="treantement images/VAMAN.jpg" alt="Vaman">
+          <p class="treatment-description">
+              Vaman (or Vamana Karma) is one of the five detoxification therapies in Panchakarma—a core part of Ayurvedic medicine. It refers to therapeutic emesis, or medically induced vomiting, and is used to eliminate excess Kapha dosha from the body.
+
+              Purpose of Vaman:
               
-            </ul>
-        </nav>
+              Vaman is recommended when there's an accumulation of Kapha in the body, leading to conditions like:
+              
+              Asthma
+              
+              Chronic allergies
+              
+              Obesity
+              
+              Skin disorders (like psoriasis)
+              
+              Sinusitis
+              
+              Indigestion
+              
+              Respiratory problems
+          </p>
+      </div>
 
-        <div class="container">
-            <h1>Ayurvedic Treatments</h1>
-
-            <!-- Treatment 1 -->
-            <div id="vaman" class="treatment-container">
-                <h2 class="treatment-title">वमन</h2>
-                <img src="treantement images/VAMAN.jpg" alt="Vaman">
-                <p class="treatment-description">
-                    Vaman (or Vamana Karma) is one of the five detoxification therapies in Panchakarma—a core part of Ayurvedic medicine. It refers to therapeutic emesis, or medically induced vomiting, and is used to eliminate excess Kapha dosha from the body.
-
-                    Purpose of Vaman:
-                    
-                    Vaman is recommended when there's an accumulation of Kapha in the body, leading to conditions like:
-                    
-                    Asthma
-                    
-                    Chronic allergies
-                    
-                    Obesity
-                    
-                    Skin disorders (like psoriasis)
-                    
-                    Sinusitis
-                    
-                    Indigestion
-                    
-                    Respiratory problems
-                </p>
-            </div>
-
-            <!-- Treatment 2 -->
-            <div id="abhyang" class="treatment-container">
-                <h2 class="treatment-title">आयुर्वेदिक फेशियल</h2>
-                <img src="treantement images/AYURVEDIC FACIAL.jpg" alt="Facial">
-                <p class="treatment-description">
-                    An Ayurvedic facial is a rejuvenating skincare therapy that uses natural, herbal, and plant-based ingredients customized to your dosha (body constitution—Vata, Pitta, or Kapha). This gentle yet effective facial focuses on cleansing, exfoliating, nourishing, and balancing the skin using traditional Ayurvedic techniques.
+      <!-- Treatment 2 -->
+      <div id="abhyang" class="treatment-container">
+          <h2 class="treatment-title">आयुर्वेदिक फेशियल</h2>
+          <img src="treantement images/AYURVEDIC FACIAL.jpg" alt="Facial">
+          <p class="treatment-description">
+              An Ayurvedic facial is a rejuvenating skincare therapy that uses natural, herbal, and plant-based ingredients customized to your dosha (body constitution—Vata, Pitta, or Kapha). This gentle yet effective facial focuses on cleansing, exfoliating, nourishing, and balancing the skin using traditional Ayurvedic techniques.
 
 Key Elements:
 
@@ -257,51 +223,51 @@ Reduces signs of aging
 Detoxifies and deeply nourishes the skin
 
 Enhances mental relaxation and emotional balance
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <!-- Treatment 3 -->
-            <div id="janubasti" class="treatment-container">
-                <h2 class="treatment-title">अभ्यंग</h2>
-                <img src="treantement images/ABHYANGA.jpg" alt="Abhyanga">
-                <p class="treatment-description">
-                    Abhyanga is a traditional Ayurvedic full-body massage that uses warm, medicated oils tailored to your dosha (body constitution). This deeply nourishing therapy is designed to balance the body's energies, promote circulation, and support detoxification.
+      <!-- Treatment 3 -->
+      <div id="janubasti" class="treatment-container">
+          <h2 class="treatment-title">अभ्यंग</h2>
+          <img src="treantement images/ABHYANGA.jpg" alt="Abhyanga">
+          <p class="treatment-description">
+              Abhyanga is a traditional Ayurvedic full-body massage that uses warm, medicated oils tailored to your dosha (body constitution). This deeply nourishing therapy is designed to balance the body's energies, promote circulation, and support detoxification.
 
-                    Performed with rhythmic, synchronized strokes, Abhyanga calms the nervous system, soothes muscles, and stimulates the lymphatic system to flush out toxins. The oils used are infused with healing herbs and selected specifically to rejuvenate tissues, improve skin tone, and enhance overall vitality.
-                    
-                    Key Elements:
-                    
-                    Warm Herbal Oils: Personalized according to your dosha to nourish and balance body and mind.
-                    
-                    Gentle Rhythmic Massage: Long, flowing strokes that promote relaxation and enhance circulation.
-                    
-                    Detoxification: Helps remove accumulated toxins (ama) from the body and improves lymphatic flow.
-                    
-                    Balancing Effect: Calms Vata dosha and supports grounding, stability, and rejuvenation.
-                    
-                    
-                    Benefits:
-                    
-                    Deep relaxation and stress relief
-                    
-                    Enhanced blood and lymph circulation
-                    
-                    Improved sleep and mental clarity
-                    
-                    Softer, healthier skin
-                    
-                    Joint lubrication and improved flexibility
-                    
-                    Strengthens immunity and overall vitality
-                </p>
-            </div>
+              Performed with rhythmic, synchronized strokes, Abhyanga calms the nervous system, soothes muscles, and stimulates the lymphatic system to flush out toxins. The oils used are infused with healing herbs and selected specifically to rejuvenate tissues, improve skin tone, and enhance overall vitality.
+              
+              Key Elements:
+              
+              Warm Herbal Oils: Personalized according to your dosha to nourish and balance body and mind.
+              
+              Gentle Rhythmic Massage: Long, flowing strokes that promote relaxation and enhance circulation.
+              
+              Detoxification: Helps remove accumulated toxins (ama) from the body and improves lymphatic flow.
+              
+              Balancing Effect: Calms Vata dosha and supports grounding, stability, and rejuvenation.
+              
+              
+              Benefits:
+              
+              Deep relaxation and stress relief
+              
+              Enhanced blood and lymph circulation
+              
+              Improved sleep and mental clarity
+              
+              Softer, healthier skin
+              
+              Joint lubrication and improved flexibility
+              
+              Strengthens immunity and overall vitality
+          </p>
+      </div>
 
-            <!-- Add more treatments below in same format -->
+      <!-- Add more treatments below in same format -->
 
-            <div id="janubasti2" class="treatment-container">
-                <h2 class="treatment-title">जानु बस्ती</h2>
-                <img src="treantement images/JANU BASTI.jpg" alt="Janubasti">
-                <p class="treatment-description">
+      <div id="janubasti2" class="treatment-container">
+          <h2 class="treatment-title">जानु बस्ती</h2>
+          <img src="treantement images/JANU BASTI.jpg" alt="Janubasti">
+          <p class="treatment-description">
 
 Janu Basti is a traditional Ayurvedic treatment where medicated warm oil is retained over the knee joint inside a well made from dough. It’s a localized therapy that provides pain relief, nourishment, and lubrication to the knee joints.
 
@@ -318,179 +284,179 @@ Nourishes cartilage and ligaments
 Useful in conditions like osteoarthritis, rheumatoid arthritis, and sports injuries
 
 Increases mobility and flexibility
-                   
-                </p>
-            </div>
+             
+          </p>
+      </div>
 
-            <div id="meenoPanchakarma" class="treatment-container">
-                <h2 class="treatment-title">नेत्रतर्पण</h2>
-                <img src="treantement images/NETRA TARPAN.jpg" alt="Netra Tarpan">
-                <p class="treatment-description">
-                    Netra Tarpan is a soothing Ayurvedic therapy in which medicated ghee (clarified butter) is retained in a well made of dough around the eyes. This allows the ghee to deeply nourish the eye tissues, improve vision, and alleviate eye strain.
+      <div id="meenoPanchakarma" class="treatment-container">
+          <h2 class="treatment-title">नेत्रतर्पण</h2>
+          <img src="treantement images/NETRA TARPAN.jpg" alt="Netra Tarpan">
+          <p class="treatment-description">
+              Netra Tarpan is a soothing Ayurvedic therapy in which medicated ghee (clarified butter) is retained in a well made of dough around the eyes. This allows the ghee to deeply nourish the eye tissues, improve vision, and alleviate eye strain.
 
 <br>
-                <h3>Benefits of Netra Tarpan:</h3>
-                    <br>
-                    
-                    Relieves dryness, burning, and itchiness
-                    <br>
-                    Reduces eye strain from screens or reading
-                    <br>
-                    Improves vision clarity
-                    <br>
-                    Strengthens optic nerves and eye muscles
-                    <br>
-                    Helps with dark circles and tired eyes
-                    <br>
-                    Prevents degenerative eye conditions
-                </p>
-            </div>
+          <h3>Benefits of Netra Tarpan:</h3>
+              <br>
+              
+              Relieves dryness, burning, and itchiness
+              <br>
+              Reduces eye strain from screens or reading
+              <br>
+              Improves vision clarity
+              <br>
+              Strengthens optic nerves and eye muscles
+              <br>
+              Helps with dark circles and tired eyes
+              <br>
+              Prevents degenerative eye conditions
+          </p>
+      </div>
 
-            <!-- Continue adding remaining treatments... -->
-            <div id="meenoPanchakarma1" class="treatment-container">
-                <h2 class="treatment-title">मीनो पञ्चकर्म
-                </h2>
-                <img src="treantement images/MINI PANCHAKARMA.jpg" alt="MINI PANCHAKARMA">
-                <p class="treatment-description">
-                    A gentle detox and rejuvenation program
+      <!-- Continue adding remaining treatments... -->
+      <div id="meenoPanchakarma1" class="treatment-container">
+          <h2 class="treatment-title">मीनो पञ्चकर्म
+          </h2>
+          <img src="treantement images/MINI PANCHAKARMA.jpg" alt="MINI PANCHAKARMA">
+          <p class="treatment-description">
+              A gentle detox and rejuvenation program
 
-                    Mini Panchakarma is a shorter, customized version of the traditional Ayurvedic Panchakarma detox. It offers deep cleansing, balancing of doshas, and revitalization—but in a more convenient and time-efficient format, perfect for modern lifestyles.
-                    
-                    
-                    ---
-                    
-                    What It Includes:
-                    
-                    Depending on individual needs, Mini Panchakarma may involve a combination of:
-                    
-                    Abhyanga (herbal oil massage)
-                    
-                    Swedana (herbal steam therapy)
-                    
-                    Shirodhara (oil streaming on the forehead)
-                    
-                    Basti (herbal enema)
-                    
-                    Nasya (nasal cleansing)
-                    
-                    Diet and lifestyle guidance
+              Mini Panchakarma is a shorter, customized version of the traditional Ayurvedic Panchakarma detox. It offers deep cleansing, balancing of doshas, and revitalization—but in a more convenient and time-efficient format, perfect for modern lifestyles.
+              
+              
+              ---
+              
+              What It Includes:
+              
+              Depending on individual needs, Mini Panchakarma may involve a combination of:
+              
+              Abhyanga (herbal oil massage)
+              
+              Swedana (herbal steam therapy)
+              
+              Shirodhara (oil streaming on the forehead)
+              
+              Basti (herbal enema)
+              
+              Nasya (nasal cleansing)
+              
+              Diet and lifestyle guidance
 
-                    <UL >
-                        <h3>Benefits:
+              <UL >
+                  <h3>Benefits:
 
-                        </h3>
-                        <li class="list-style">Removes accumulated toxins (ama)
-                        </li>
-                        <li class="list-style">Balances Vata, Pitta, and Kapha
+                  </h3>
+                  <li class="list-style">Removes accumulated toxins (ama)
+                  </li>
+                  <li class="list-style">Balances Vata, Pitta, and Kapha
 
-                        </li>
-                        <li class="list-style">Boosts digestion, energy, and immunity
-                        </li>
-                        <li class="list-style">
-                            Reduces stress and fatigue
-                        </li>
-                        <li class="list-style">
-                            Supports mental clarity and emotional well-being
-                        </li>
-                    </UL>
-                   <h3> Duration:</h3><br>
+                  </li>
+                  <li class="list-style">Boosts digestion, energy, and immunity
+                  </li>
+                  <li class="list-style">
+                      Reduces stress and fatigue
+                  </li>
+                  <li class="list-style">
+                      Supports mental clarity and emotional well-being
+                  </li>
+              </UL>
+             <h3> Duration:</h3><br>
 
 Typically ranges from 3 to 7 days, depending on the person's constitution and health goals.
-                    
-                </p>
-            </div>
+              
+          </p>
+      </div>
 
-            <div id="virchan" class="treatment-container">
-                <h2 class="treatment-title">विरचन
-                </h2>
-                <img src="treantement images/VIRECHANAM.jpg" alt="VIRECHANAM">
-                <p class="treatment-description">
-                    Virechan is a Panchakarma therapy in Ayurveda used for detoxification, especially targeting the liver, intestines, and skin. It's a controlled purgation procedure that eliminates excess Pitta dosha and toxins (Ama) from the body through the bowel.
+      <div id="virchan" class="treatment-container">
+          <h2 class="treatment-title">विरचन
+          </h2>
+          <img src="treantement images/VIRECHANAM.jpg" alt="VIRECHANAM">
+          <p class="treatment-description">
+              Virechan is a Panchakarma therapy in Ayurveda used for detoxification, especially targeting the liver, intestines, and skin. It's a controlled purgation procedure that eliminates excess Pitta dosha and toxins (Ama) from the body through the bowel.
 
-                    Purpose:
-                   
-                   Detoxify liver and intestines
-                   
-                   Treat Pitta-related disorders like skin issues, jaundice, acidity, allergies, etc.
-                   
-                   Improve digestion, metabolism, and immunity
-                </p>
-            </div>
+              Purpose:
+             
+             Detoxify liver and intestines
+             
+             Treat Pitta-related disorders like skin issues, jaundice, acidity, allergies, etc.
+             
+             Improve digestion, metabolism, and immunity
+          </p>
+      </div>
 
-            <div id="bodyPolishing" class="treatment-container">
-                <h2 class="treatment-title">बॉडी पलिशिंग </h2>
-                <img src="treantement images/BODY POLISHING.jpg" alt="BODY POLISHING">
-                <p class="treatment-description">
-                    BODY POLISHING
+      <div id="bodyPolishing" class="treatment-container">
+          <h2 class="treatment-title">बॉडी पलिशिंग </h2>
+          <img src="treantement images/BODY POLISHING.jpg" alt="BODY POLISHING">
+          <p class="treatment-description">
+              BODY POLISHING
 
-                    Body polishing is a luxurious spa treatment that exfoliates and rejuvenates the skin, leaving it soft, smooth, and glowing. The process involves the use of a natural scrub made from ingredients like sea salt, sugar, coffee, or herbal powders, often combined with essential oils or moisturizers. Here's what typically happens during a body polishing session:
-                    
-                    1. Cleansing: The skin is gently cleansed to remove surface dirt and oils.
-                    
-                    
-                    2. Exfoliation: A scrub is massaged onto the body in circular motions to slough off dead skin cells and stimulate blood circulation.
-                    
-                    
-                    3. Rinsing: The scrub is rinsed off, usually with a warm shower or damp towels.
-                    
-                    
-                    4. Moisturizing: A nourishing body lotion or oil is applied to hydrate and soothe the skin.
-                    
-                    
-                    
-                    Benefits:
-                    
-                    Removes dead skin cells
-                    
-                    Improves skin tone and texture
-                    
-                    Promotes cell regeneration
-                    
-                    Enhances absorption of skincare products
-                    
-                    Gives the skin a radiant, youthful glow
-                </p>
-            </div>
+              Body polishing is a luxurious spa treatment that exfoliates and rejuvenates the skin, leaving it soft, smooth, and glowing. The process involves the use of a natural scrub made from ingredients like sea salt, sugar, coffee, or herbal powders, often combined with essential oils or moisturizers. Here's what typically happens during a body polishing session:
+              
+              1. Cleansing: The skin is gently cleansed to remove surface dirt and oils.
+              
+              
+              2. Exfoliation: A scrub is massaged onto the body in circular motions to slough off dead skin cells and stimulate blood circulation.
+              
+              
+              3. Rinsing: The scrub is rinsed off, usually with a warm shower or damp towels.
+              
+              
+              4. Moisturizing: A nourishing body lotion or oil is applied to hydrate and soothe the skin.
+              
+              
+              
+              Benefits:
+              
+              Removes dead skin cells
+              
+              Improves skin tone and texture
+              
+              Promotes cell regeneration
+              
+              Enhances absorption of skincare products
+              
+              Gives the skin a radiant, youthful glow
+          </p>
+      </div>
 
-            <div id="swedan" class="treatment-container">
-                <h2 class="treatment-title">स्वेदन </h2>
-                <img src="treantement images/SWEDAN.jpg" alt="Netra Tarpan">
-                <p class="treatment-description">
-                    Swedana (or Swedan) Treatment is a traditional Ayurvedic therapy that involves inducing sweating through steam or heat to detoxify the body. It is commonly used as a preparatory procedure (Purvakarma) before main detox therapies like Panchakarma.
+      <div id="swedan" class="treatment-container">
+          <h2 class="treatment-title">स्वेदन </h2>
+          <img src="treantement images/SWEDAN.jpg" alt="Netra Tarpan">
+          <p class="treatment-description">
+              Swedana (or Swedan) Treatment is a traditional Ayurvedic therapy that involves inducing sweating through steam or heat to detoxify the body. It is commonly used as a preparatory procedure (Purvakarma) before main detox therapies like Panchakarma.
 
-                    Purpose:
-                    
-                    To open up the body’s channels (srotas)
-                    
-                    To loosen and mobilize toxins (ama)
-                    
-                    To relieve stiffness, heaviness, and coldness
-                    
-                    To promote better circulation and metabolism
-                    
-                    
-                    
-                    ---
-                    
- <h3>  Types of Swedana:  </h3>
-                   
-                    <br>
-                    1. Nadi Swedana – Localized steam using a tube or pipe
-                    <br>
-                    
-                    2. Bashpa Swedana – Full-body steam chamber
-                    <br>
-                    
-                    3. Pinda Sweda – Application of warm herbal boluses
-                    <br>
-                    
-                    4. Avagaha Sweda – Sitting in a tub of warm herbal decoction
-                    <br>
-                    
-                    5. Upanaha Sweda – Application of warm poultices or pastes
+              Purpose:
+              
+              To open up the body’s channels (srotas)
+              
+              To loosen and mobilize toxins (ama)
+              
+              To relieve stiffness, heaviness, and coldness
+              
+              To promote better circulation and metabolism
+              
+              
+              
+              ---
+              
+<h3>  Types of Swedana:  </h3>
+             
+              <br>
+              1. Nadi Swedana – Localized steam using a tube or pipe
+              <br>
+              
+              2. Bashpa Swedana – Full-body steam chamber
+              <br>
+              
+              3. Pinda Sweda – Application of warm herbal boluses
+              <br>
+              
+              4. Avagaha Sweda – Sitting in a tub of warm herbal decoction
+              <br>
+              
+              5. Upanaha Sweda – Application of warm poultices or pastes
 <br>
-                    
- <h3>   Procedure:  </h3>
+              
+<h3>   Procedure:  </h3>
 <br>
 1. The patient is given an oil massage (Abhyanga) beforehand. <br>
 
@@ -508,7 +474,7 @@ Typically ranges from 3 to 7 days, depending on the person's constitution and h
 <br>
 
 
- <h3> Benefits:  </h3> <br>
+<h3> Benefits:  </h3> <br>
 
 Removes toxins through sweat <br>
 
@@ -519,117 +485,117 @@ Improves skin health and glow <br>
 Aids in weight management <br>
 
 Promotes relaxation and mental clarity <br>
-                    
-                </p>
-            </div>
+              
+          </p>
+      </div>
 
-            <div id="katiBasti" class="treatment-container">
-                <h2 class="treatment-title">कटि बस्ती</h2>
-                <img src="treantement images/KATI BASTI.jpg" alt="KATI BASTI">
-                <p class="treatment-description">
-                    Kati Basti is a specialized Ayurvedic therapy focused on treating lower back pain and disorders of the lumbar-sacral region. The word "Kati" means lower back, and "Basti" refers to a container or retaining structure used to hold warm medicated oil over a specific area.
+      <div id="katiBasti" class="treatment-container">
+          <h2 class="treatment-title">कटि बस्ती</h2>
+          <img src="treantement images/KATI BASTI.jpg" alt="KATI BASTI">
+          <p class="treatment-description">
+              Kati Basti is a specialized Ayurvedic therapy focused on treating lower back pain and disorders of the lumbar-sacral region. The word "Kati" means lower back, and "Basti" refers to a container or retaining structure used to hold warm medicated oil over a specific area.
 
-                    <br>
-                    <h3> Purpose:</h3> <br>
-                    
-                    To relieve pain and stiffness in the lower back <br>
-                    
-                    To nourish and strengthen the spine and surrounding tissues <br>
-                    
-                    To manage chronic conditions like sciatica, slipped disc, and lumbar spondylosis
-                    <br>
-                    
-                    <h3>  Benefits: </h3> <br>
-                    
-                    Relieves chronic back pain and muscular spasms <br>
-                    
-                    Improves circulation and flexibility in the lower spine <br>
-                    
-                    Helps manage herniated discs, sciatica, and inflammation <br>
-                    
-                    Strengthens bones, muscles, and nerves in the lumbar area <br>
-                </p>
-            </div>
+              <br>
+              <h3> Purpose:</h3> <br>
+              
+              To relieve pain and stiffness in the lower back <br>
+              
+              To nourish and strengthen the spine and surrounding tissues <br>
+              
+              To manage chronic conditions like sciatica, slipped disc, and lumbar spondylosis
+              <br>
+              
+              <h3>  Benefits: </h3> <br>
+              
+              Relieves chronic back pain and muscular spasms <br>
+              
+              Improves circulation and flexibility in the lower spine <br>
+              
+              Helps manage herniated discs, sciatica, and inflammation <br>
+              
+              Strengthens bones, muscles, and nerves in the lumbar area <br>
+          </p>
+      </div>
 
-            <div id="karnPuran" class="treatment-container">
-                <h2 class="treatment-title">कर्ण पूरण</h2>
-                <img src="treantement images/KARNA PURAN.jpg" alt="KARNA PURAN">
-                <p class="treatment-description">
-                    Karna Purana is a traditional Ayurvedic procedure where warm medicated oil is gently poured into the ears. The Sanskrit word "Karna" means ear, and "Purana" means filling. It is used both therapeutically and preventively.
-
-
-                    ---
-                     <br>
-                 <h3>  Karna Purana is recommended for: </h3>
-                    <br>
-                   
-                    
-                    Ear pain <br>
-                    
-                    Tinnitus (ringing in the ears) <br>
-                    
-                    Vertigo and balance issues
-                     <br>
-                    Hearing problems
-                     <br>
-                    Dryness or itching in the ear canal
-                    <br>
-                    
-                    Jaw tension and TMJ problems <br>
-                    
-                    Stress and anxiety relief <br>
-                    
-                    
-                    It's believed to help balance Vata dosha, especially in the head and neck region.
-                </p>
-            </div>
-
-            <div id="garbhSanskar" class="treatment-container">
-                <h2 class="treatment-title">गर्भ संस्कार</h2>
-                <img src="treantement images/GARBHA SANSKAR.jpg"   alt="Garbha Sanskar">
-                <p class="treatment-description">
-                    Garbha Sanskar is an ancient Indian prenatal practice focused on the mental, emotional, spiritual, and physical well-being of the mother and the unborn child. The term "Garbha Sanskar" literally means "educating the fetus in the womb."
+      <div id="karnPuran" class="treatment-container">
+          <h2 class="treatment-title">कर्ण पूरण</h2>
+          <img src="treantement images/KARNA PURAN.jpg" alt="KARNA PURAN">
+          <p class="treatment-description">
+              Karna Purana is a traditional Ayurvedic procedure where warm medicated oil is gently poured into the ears. The Sanskrit word "Karna" means ear, and "Purana" means filling. It is used both therapeutically and preventively.
 
 
-                    ---
-                     <br>
-                    <h3>Benefits of Garbha Sanskar </h3>
-                    <br>
-                    
-                    1. Positive Development of the Baby,
-                    
-                    Stimulates brain development and sensory perception in the fetus,
-                    
-                    Promotes better emotional bonding between the mother and baby,
-                    
-                    Believed to help in shaping the baby’s personality, intellect, and temperament even before birth.
-                    
-                     <br>
-                    2. Emotional and Mental Well-being of the Mother,
-                    
-                    Encourages calmness, joy, and positivity ,
-                    
-                    Reduces stress, anxiety, and emotional imbalances during pregnancy,
-                    
-                    Enhances the mother’s mental clarity and confidence.
-                     <br>
-                     3. Spiritual and Cultural Connection
+              ---
+               <br>
+           <h3>  Karna Purana is recommended for: </h3>
+              <br>
+             
+              
+              Ear pain <br>
+              
+              Tinnitus (ringing in the ears) <br>
+              
+              Vertigo and balance issues
+               <br>
+              Hearing problems
+               <br>
+              Dryness or itching in the ear canal
+              <br>
+              
+              Jaw tension and TMJ problems <br>
+              
+              Stress and anxiety relief <br>
+              
+              
+              It's believed to help balance Vata dosha, especially in the head and neck region.
+          </p>
+      </div>
+
+      <div id="garbhSanskar" class="treatment-container">
+          <h2 class="treatment-title">गर्भ संस्कार</h2>
+          <img src="treantement images/GARBHA SANSKAR.jpg"   alt="Garbha Sanskar">
+          <p class="treatment-description">
+              Garbha Sanskar is an ancient Indian prenatal practice focused on the mental, emotional, spiritual, and physical well-being of the mother and the unborn child. The term "Garbha Sanskar" literally means "educating the fetus in the womb."
+
+
+              ---
+               <br>
+              <h3>Benefits of Garbha Sanskar </h3>
+              <br>
+              
+              1. Positive Development of the Baby,
+              
+              Stimulates brain development and sensory perception in the fetus,
+              
+              Promotes better emotional bonding between the mother and baby,
+              
+              Believed to help in shaping the baby’s personality, intellect, and temperament even before birth.
+              
+               <br>
+              2. Emotional and Mental Well-being of the Mother,
+              
+              Encourages calmness, joy, and positivity ,
+              
+              Reduces stress, anxiety, and emotional imbalances during pregnancy,
+              
+              Enhances the mother’s mental clarity and confidence.
+               <br>
+               3. Spiritual and Cultural Connection
 
 Involves chanting of mantras, reading spiritual texts, listening to classical music, and practicing meditation and
 
 Connects the mother and baby to cultural and spiritual values from the womb itself.
- <br>
+<br>
 
 4. Physical Health Benefits
 
 Includes practices like yoga, balanced diet, and Ayurvedic care, which help:
- <br>
+<br>
 Reduce pregnancy-related discomforts
- <br>
+<br>
 Maintain hormonal balance
- <br>
+<br>
 Improve immunity and energy levels
- <br>
+<br>
 
 
 5. Stronger Family Bond
@@ -652,139 +618,139 @@ Eating sattvic (pure, balanced) food <br>
 
 Maintaining a positive, stress-free environment 
 
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="nasy" class="treatment-container">
-                <h2 class="treatment-title">नस्य</h2>
-                <img src="treantement images/NASYA.jpg" alt="Nasya" >
-                <p class="treatment-description">
-                   <h3>Benefits of Nasya</h3>
+      <div id="nasy" class="treatment-container">
+          <h2 class="treatment-title">नस्य</h2>
+          <img src="treantement images/NASYA.jpg" alt="Nasya" >
+          <p class="treatment-description">
+             <h3>Benefits of Nasya</h3>
 
-                    1. Clears Sinuses and Headaches
-                    Effective for sinusitis, congestion, migraines, headaches. <br>
-                    
-                    
-                    2. Improves Breathing and Voice
-                    
-                    Clears nasal passages and enhances respiratory health and
-                    
-                    Benefits the throat, voice, and sense organs. <br>
-                    
-                    
-                    3. Boosts Brain Function
-                    
-                    Enhances memory, concentration, and mental clarity also 
-                    
-                    Beneficial for insomnia, stress, anxiety, and depression.
-                     <br>
-                    
-                    
-                    4. Rejuvenates Facial Tissues
-                    
-                    Improves skin texture, reduces dark circles, and prevents premature graying or hair fall ,
-                    
-                    Strengthens the nerves and muscles of the face.
-                     <br>
-                    
-                    5. Hormonal and Emotional Balance
-                    
-                    Works on the hypothalamus-pituitary axis, helping balance hormones and emotional stability. 
-                </p>
-            </div>
+              1. Clears Sinuses and Headaches
+              Effective for sinusitis, congestion, migraines, headaches. <br>
+              
+              
+              2. Improves Breathing and Voice
+              
+              Clears nasal passages and enhances respiratory health and
+              
+              Benefits the throat, voice, and sense organs. <br>
+              
+              
+              3. Boosts Brain Function
+              
+              Enhances memory, concentration, and mental clarity also 
+              
+              Beneficial for insomnia, stress, anxiety, and depression.
+               <br>
+              
+              
+              4. Rejuvenates Facial Tissues
+              
+              Improves skin texture, reduces dark circles, and prevents premature graying or hair fall ,
+              
+              Strengthens the nerves and muscles of the face.
+               <br>
+              
+              5. Hormonal and Emotional Balance
+              
+              Works on the hypothalamus-pituitary axis, helping balance hormones and emotional stability. 
+          </p>
+      </div>
 
-            <div id="shirolepam" class="treatment-container">
-                <h2 class="treatment-title">शिरोलेपम</h2>
-                <img src="treantement images/SHIROLEPAM.jpg" alt="SHIROLEPAM">
-                <p class="treatment-description">
-                    
-                    Shirolepam is a traditional Ayurvedic treatment where a herbal paste is applied on the scalp or forehead. It’s mainly used to calm the mind, nourish the scalp, and treat various neurological and psychological conditions.
-                    
-                    The word "Shiro" means head, and "Lepam" means application of paste.
-                     <br>
-                     <h3>Benefits of Shirolepam</h3>
-                     <br>
-                    
-                    1. Relieves Stress and Mental Fatigue
-                    
-                    Calms the nervous system and
-                    
-                    Helps in anxiety, depression, and insomnia.
-                    
-                     <br>
-                    2. Treats Headaches and Migraines
-                    
-                    Especially effective for tension headaches and Pitta-related migraines .
-                    
-                    <br>
-                    3. Improves Scalp and Hair Health
-                    
-                    Treats dandruff, itching, hair fall, and scalp infections
-                    
-                    Promotes hair growth and thicker, healthier hair.
-                    <br>
-                    
-                    
-                    4. Enhances Brain Function
-                    
-                    Supports concentration, memory, and mental clarity.
-                    <br>
-                    
-                    
-                    5. Supports Eye and Ear Health
-                    
-                    Because of its cooling and pacifying nature, it indirectly benefits vision and hearing, especially when Pitta is aggravated. <br>
-                </p>
-            </div>
+      <div id="shirolepam" class="treatment-container">
+          <h2 class="treatment-title">शिरोलेपम</h2>
+          <img src="treantement images/SHIROLEPAM.jpg" alt="SHIROLEPAM">
+          <p class="treatment-description">
+              
+              Shirolepam is a traditional Ayurvedic treatment where a herbal paste is applied on the scalp or forehead. It’s mainly used to calm the mind, nourish the scalp, and treat various neurological and psychological conditions.
+              
+              The word "Shiro" means head, and "Lepam" means application of paste.
+               <br>
+               <h3>Benefits of Shirolepam</h3>
+               <br>
+              
+              1. Relieves Stress and Mental Fatigue
+              
+              Calms the nervous system and
+              
+              Helps in anxiety, depression, and insomnia.
+              
+               <br>
+              2. Treats Headaches and Migraines
+              
+              Especially effective for tension headaches and Pitta-related migraines .
+              
+              <br>
+              3. Improves Scalp and Hair Health
+              
+              Treats dandruff, itching, hair fall, and scalp infections
+              
+              Promotes hair growth and thicker, healthier hair.
+              <br>
+              
+              
+              4. Enhances Brain Function
+              
+              Supports concentration, memory, and mental clarity.
+              <br>
+              
+              
+              5. Supports Eye and Ear Health
+              
+              Because of its cooling and pacifying nature, it indirectly benefits vision and hearing, especially when Pitta is aggravated. <br>
+          </p>
+      </div>
 
-            <div id="shirodhara" class="treatment-container">
-                <h2 class="treatment-title">शिरोधारा</h2>
-                <img src="treantement images/SHIRODHARA.jpg" alt="SHIRODHARA">
-                <p class="treatment-description">
-        
-                    Ayurvedic Oil Therapy for the Mind
-                   
-                   Shirodhara is a deeply relaxing Ayurvedic therapy where a continuous, gentle stream of warm herbal oil (or other liquids like buttermilk, milk, or decoctions) is poured over the forehead (Ajna Chakra / "third eye" area).
-                   
-                   The word "Shiro" means head, and "Dhara" means flow — together, it translates to "head flow."
-                   
-                   <br>
-                   
-                   <h3>Key Benefits of Shirodhara </h3>
-                   
-                   1. Reduces Stress and Anxiety,
-                   
-                   Instantly calms the nervous system,
-                   
-                   Lowers cortisol (stress hormone) levels,
-                   
-                   Very effective in treating chronic stress, general anxiety, and panic attacks.
-                   
-                   <br>
-                   
-                   2. Promotes Deep Sleep
-                   
-                   Excellent for insomnia and disturbed sleep patterns and 
-                   
-                   Induces a deep meditative state, often leading to sound, restful sleep.
-                   
-                    <br>
-                   3. Enhances Mental Clarity and Focus
-                   
-                   Improves memory, concentration, and mental sharpness ,
-                   
-                   Balances the Vata and Pitta doshas in the mind.
-                   
-                   <br>
-                   4. Relieves Headaches and Migraines
+      <div id="shirodhara" class="treatment-container">
+          <h2 class="treatment-title">शिरोधारा</h2>
+          <img src="treantement images/SHIRODHARA.jpg" alt="SHIRODHARA">
+          <p class="treatment-description">
+  
+              Ayurvedic Oil Therapy for the Mind
+             
+             Shirodhara is a deeply relaxing Ayurvedic therapy where a continuous, gentle stream of warm herbal oil (or other liquids like buttermilk, milk, or decoctions) is poured over the forehead (Ajna Chakra / "third eye" area).
+             
+             The word "Shiro" means head, and "Dhara" means flow — together, it translates to "head flow."
+             
+             <br>
+             
+             <h3>Key Benefits of Shirodhara </h3>
+             
+             1. Reduces Stress and Anxiety,
+             
+             Instantly calms the nervous system,
+             
+             Lowers cortisol (stress hormone) levels,
+             
+             Very effective in treating chronic stress, general anxiety, and panic attacks.
+             
+             <br>
+             
+             2. Promotes Deep Sleep
+             
+             Excellent for insomnia and disturbed sleep patterns and 
+             
+             Induces a deep meditative state, often leading to sound, restful sleep.
+             
+              <br>
+             3. Enhances Mental Clarity and Focus
+             
+             Improves memory, concentration, and mental sharpness ,
+             
+             Balances the Vata and Pitta doshas in the mind.
+             
+             <br>
+             4. Relieves Headaches and Migraines
 
 Reduces intensity and frequency of tension headaches and Pitta-based migraines.
- <br>
+<br>
 
 5. Nourishes Hair and Scalp
 
 Strengthens hair roots, prevents hair fall, premature graying, and dandruff.
- <br>
+<br>
 
 6. Helps with Hormonal Imbalance
 
@@ -810,137 +776,137 @@ Soothes the emotional centers of the brain.
 Helps release suppressed emotions and improves emotional resilience.
 
 
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="grivaBasti" class="treatment-container">
-                <h2 class="treatment-title">ग्रीवा बस्ती</h2>
-                <img src="treantement images/GREEVA BASTI.jpg" alt="GREEVA BASTI">
-                <p class="treatment-description">
-                    Greeva Basti (also known as Griva Basti) is a traditional Ayurvedic therapy designed to address neck-related ailments. The term "Greeva" refers to the neck, and "Basti" means to retain or hold. In this treatment, warm medicated oil is retained on the cervical region using a dough dam, allowing the therapeutic properties of the oil to penetrate deeply into the tissues.
-                    <br>
-                     <h3>Key Benefits of Greeva Basti</h3>
-                    <br>
-                    1. Relieves Neck Pain and Stiffness
-                    The warmth and medicinal properties of the oil help alleviate chronic and acute neck pain, reducing stiffness and improving mobility.
-                    
-                    <br>
-                    2. Improves Flexibility and Mobility
-                    By nourishing the muscles and lubricating the joints, Greeva Basti enhances the flexibility of the neck and shoulders, facilitating smoother movement.
-                    <br>
-                    
-                    3. Enhances Blood Circulation
-                    The therapy stimulates blood flow in the cervical region, promoting better oxygen and nutrient supply to the tissues, which aids in healing and rejuvenation.
-                    
-                    <br>
-                    4. Reduces Inflammation and Muscle Spasms
-                    The anti-inflammatory properties of the medicated oils help in reducing swelling and relieving muscle spasms in the neck area.
-                    
-                    <br>
-                    5. Addresses Cervical Spondylosis and Related Conditions
-                    Greeva Basti is particularly beneficial for conditions like cervical spondylosis, frozen shoulder, and other degenerative disorders of the cervical spine.
-                    <br>
-                    6. Alleviates Stress and Tension
+      <div id="grivaBasti" class="treatment-container">
+          <h2 class="treatment-title">ग्रीवा बस्ती</h2>
+          <img src="treantement images/GREEVA BASTI.jpg" alt="GREEVA BASTI">
+          <p class="treatment-description">
+              Greeva Basti (also known as Griva Basti) is a traditional Ayurvedic therapy designed to address neck-related ailments. The term "Greeva" refers to the neck, and "Basti" means to retain or hold. In this treatment, warm medicated oil is retained on the cervical region using a dough dam, allowing the therapeutic properties of the oil to penetrate deeply into the tissues.
+              <br>
+               <h3>Key Benefits of Greeva Basti</h3>
+              <br>
+              1. Relieves Neck Pain and Stiffness
+              The warmth and medicinal properties of the oil help alleviate chronic and acute neck pain, reducing stiffness and improving mobility.
+              
+              <br>
+              2. Improves Flexibility and Mobility
+              By nourishing the muscles and lubricating the joints, Greeva Basti enhances the flexibility of the neck and shoulders, facilitating smoother movement.
+              <br>
+              
+              3. Enhances Blood Circulation
+              The therapy stimulates blood flow in the cervical region, promoting better oxygen and nutrient supply to the tissues, which aids in healing and rejuvenation.
+              
+              <br>
+              4. Reduces Inflammation and Muscle Spasms
+              The anti-inflammatory properties of the medicated oils help in reducing swelling and relieving muscle spasms in the neck area.
+              
+              <br>
+              5. Addresses Cervical Spondylosis and Related Conditions
+              Greeva Basti is particularly beneficial for conditions like cervical spondylosis, frozen shoulder, and other degenerative disorders of the cervical spine.
+              <br>
+              6. Alleviates Stress and Tension
 The soothing nature of the therapy helps in relieving stress and tension accumulated in the neck and shoulder regions, promoting overall relaxation.
 <br>
 
 7. Nourishes Cervical Muscles and Nerves
 The medicated oils used in Greeva Basti nourish the muscles, bones, and nerves of the cervical area, strengthening them and preventing degeneration.
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="agnikarma" class="treatment-container">
-                <h2 class="treatment-title">अग्निकर्म</h2>
-                <img src="treantement images/AGNIKARMA.jpg" alt="AGNIKARMA">
-                <p class="treatment-description">
-                    Agnikarma is an ancient Ayurvedic therapeutic procedure that involves the controlled application of heat or thermal cauterization to treat various diseases, especially musculoskeletal and chronic pain conditions. It is often used when other treatments like oral medications or Panchakarma are not effective.
+      <div id="agnikarma" class="treatment-container">
+          <h2 class="treatment-title">अग्निकर्म</h2>
+          <img src="treantement images/AGNIKARMA.jpg" alt="AGNIKARMA">
+          <p class="treatment-description">
+              Agnikarma is an ancient Ayurvedic therapeutic procedure that involves the controlled application of heat or thermal cauterization to treat various diseases, especially musculoskeletal and chronic pain conditions. It is often used when other treatments like oral medications or Panchakarma are not effective.
 
 <br>
-                    <h3> Benefits:</h3> <br>
-                    
-                    Immediate pain relief in many cases,
-                    
-                    Non-surgical and minimally invasive,
-                    
-                    Stimulates natural healing,
-                    
-                    Useful in localized conditions without systemic side effects.
-                </p>
-            </div>
-            <div id="swarnPrashan"class="treatment-container">
-                <h2 class="treatment-title">स्वर्ण प्राशन</h2>
-                <img src="treantement images/SWARNAPRASHAN.jpg" alt="SWARNAPRASHAN">
-                <p class="treatment-description">
-                    Swarnaprashan is an ancient Ayurvedic practice where a preparation containing purified gold (Suvarna Bhasma), honey, ghee, and herbal extracts is administered to children. It's typically given on Pushya Nakshatra days, considered highly auspicious in Ayurveda.
+              <h3> Benefits:</h3> <br>
+              
+              Immediate pain relief in many cases,
+              
+              Non-surgical and minimally invasive,
+              
+              Stimulates natural healing,
+              
+              Useful in localized conditions without systemic side effects.
+          </p>
+      </div>
+      <div id="swarnPrashan"class="treatment-container">
+          <h2 class="treatment-title">स्वर्ण प्राशन</h2>
+          <img src="treantement images/SWARNAPRASHAN.jpg" alt="SWARNAPRASHAN">
+          <p class="treatment-description">
+              Swarnaprashan is an ancient Ayurvedic practice where a preparation containing purified gold (Suvarna Bhasma), honey, ghee, and herbal extracts is administered to children. It's typically given on Pushya Nakshatra days, considered highly auspicious in Ayurveda.
 
-                     <h3>Benefits of Suvarnaprashan:</h3>
-                     <br>
-                    1. Boosts Immunity:
-                    Strengthens the immune system, making children less prone to infections.
-                    <br>
-                    
-                    2. Enhances Memory & Intelligence:
-                    Believed to support brain development, improve concentration, grasping power, and memory.
-                    
-                    <br>
-                    3. Improves Digestion & Metabolism:
-                    Helps enhance appetite and overall digestive functions.
-                    
-                    <br>
-                    4. Promotes Physical Growth:
-                    Aids in healthy weight gain and physical development.
-                    <br>
-                    
-                    5. Improves Skin Tone & Complexion:
-                    Traditionally believed to enhance skin health.
-                    
-                    <br>
-                    6. Detoxification:
-                    Helps in removing toxins from the body due to its Rasayana (rejuvenating) properties.
-                    <br>
-                    
-                    7. Improves Speech & Cognitive Functions:
-                    May support speech development and clear communication.
-                    <br>
-                    
-                    8. General Well-being:
-                    Encourages balanced growth and overall wellness in children.
-                </p>
-            </div>
-            <div id="basti" class="treatment-container">
-                <h2 class="treatment-title">बस्ती </h2>
-                <img src="treantement images/BASTI.jpg" alt="BASTI">
-                <p class="treatment-description">
-                    Basti is one of the five main therapies of Panchakarma in Ayurveda, primarily focused on cleansing and rejuvenating the colon. It's often called the "king of treatments" in Ayurveda because of its wide-ranging benefits for both detoxification and nourishment. Here are some key benefits of Basti treatment:
-                     
-                    <br>
-                    1. Detoxifies the Body
-                    
-                    Eliminates accumulated Vata dosha and other toxins from the colon.
-                    
-                    Helps clear deep-rooted toxins (Ama) from the tissues.
-                    <br>
-                    
-                    2. Balances Vata Dosha
-                    
-                    Especially beneficial for disorders caused by Vata imbalance (e.g., joint pain, constipation, anxiety, dryness).
-                    <br>
-                    
-                    3. Improves Digestion and Metabolism
-                    
-                    Enhances Agni (digestive fire), supporting better nutrient absorption and digestion.
-                    <br>
-                    
-                    4. Boosts Immunity
-                    
-                    By cleansing and rejuvenating the colon, it supports the body’s natural defense mechanisms.
-                    
-                    <br>
-                    5. Supports Joint and Bone Health
-                    
-                    Helps relieve symptoms of arthritis, sciatica, back pain, and other musculoskeletal disorders.
-                    <br>
-                    6. Enhances Mental Health
+               <h3>Benefits of Suvarnaprashan:</h3>
+               <br>
+              1. Boosts Immunity:
+              Strengthens the immune system, making children less prone to infections.
+              <br>
+              
+              2. Enhances Memory & Intelligence:
+              Believed to support brain development, improve concentration, grasping power, and memory.
+              
+              <br>
+              3. Improves Digestion & Metabolism:
+              Helps enhance appetite and overall digestive functions.
+              
+              <br>
+              4. Promotes Physical Growth:
+              Aids in healthy weight gain and physical development.
+              <br>
+              
+              5. Improves Skin Tone & Complexion:
+              Traditionally believed to enhance skin health.
+              
+              <br>
+              6. Detoxification:
+              Helps in removing toxins from the body due to its Rasayana (rejuvenating) properties.
+              <br>
+              
+              7. Improves Speech & Cognitive Functions:
+              May support speech development and clear communication.
+              <br>
+              
+              8. General Well-being:
+              Encourages balanced growth and overall wellness in children.
+          </p>
+      </div>
+      <div id="basti" class="treatment-container">
+          <h2 class="treatment-title">बस्ती </h2>
+          <img src="treantement images/BASTI.jpg" alt="BASTI">
+          <p class="treatment-description">
+              Basti is one of the five main therapies of Panchakarma in Ayurveda, primarily focused on cleansing and rejuvenating the colon. It's often called the "king of treatments" in Ayurveda because of its wide-ranging benefits for both detoxification and nourishment. Here are some key benefits of Basti treatment:
+               
+              <br>
+              1. Detoxifies the Body
+              
+              Eliminates accumulated Vata dosha and other toxins from the colon.
+              
+              Helps clear deep-rooted toxins (Ama) from the tissues.
+              <br>
+              
+              2. Balances Vata Dosha
+              
+              Especially beneficial for disorders caused by Vata imbalance (e.g., joint pain, constipation, anxiety, dryness).
+              <br>
+              
+              3. Improves Digestion and Metabolism
+              
+              Enhances Agni (digestive fire), supporting better nutrient absorption and digestion.
+              <br>
+              
+              4. Boosts Immunity
+              
+              By cleansing and rejuvenating the colon, it supports the body’s natural defense mechanisms.
+              
+              <br>
+              5. Supports Joint and Bone Health
+              
+              Helps relieve symptoms of arthritis, sciatica, back pain, and other musculoskeletal disorders.
+              <br>
+              6. Enhances Mental Health
 
 Calms the nervous system and can reduce anxiety, insomnia, and mental restlessness.
 
@@ -963,43 +929,43 @@ Useful in managing gynecological issues, menstrual irregularities, and fertility
 10. Promotes Longevity and Vitality
 
 Regular Basti therapy is believed to slow aging, boost vitality, and enhance overall well-being.
-                </p>
-            </div>
-            <div id="detox" class="treatment-container">
-                <h2 class="treatment-title">डिटॉक्स</h2>
-                <img src="treantement images/DETOXIFICATION.jpg" alt="DETOXIFICATION">
-                <p class="treatment-description">
-                    Detoxification—whether through Ayurveda, nutrition, or lifestyle changes—offers a wide range of benefits for physical, mental, and emotional well-being. Here's a breakdown of the top detox 
-                    <h3>benefits: </h3>
+          </p>
+      </div>
+      <div id="detox" class="treatment-container">
+          <h2 class="treatment-title">डिटॉक्स</h2>
+          <img src="treantement images/DETOXIFICATION.jpg" alt="DETOXIFICATION">
+          <p class="treatment-description">
+              Detoxification—whether through Ayurveda, nutrition, or lifestyle changes—offers a wide range of benefits for physical, mental, and emotional well-being. Here's a breakdown of the top detox 
+              <h3>benefits: </h3>
 
-                    <br>
-                    1. Removes Toxins from the Body
-                    
-                    Clears out accumulated Ama (in Ayurveda) or harmful substances from processed foods, pollution, and stress.
-                    
-                    Supports the liver, kidneys, skin, and colon in their natural detox functions.
-                    
-                    
-                    
-               <br>
-                    
-                    2. Boosts Energy Levels
-                    
-                    Less toxic load = more energy for digestion, movement, and brain function.
-                    
-                    Reduces fatigue and sluggishness.
-                    
-                    
-                    
-                    <br>        
-                    3. Improves Digestion
-                    
-                    Clears out buildup in the gut, improving absorption and elimination.
-                    
-                    Reduces bloating, gas, and constipation.
-                    
-                    <br>
-                    4. Enhances Skin Clarity
+              <br>
+              1. Removes Toxins from the Body
+              
+              Clears out accumulated Ama (in Ayurveda) or harmful substances from processed foods, pollution, and stress.
+              
+              Supports the liver, kidneys, skin, and colon in their natural detox functions.
+              
+              
+              
+         <br>
+              
+              2. Boosts Energy Levels
+              
+              Less toxic load = more energy for digestion, movement, and brain function.
+              
+              Reduces fatigue and sluggishness.
+              
+              
+              
+              <br>        
+              3. Improves Digestion
+              
+              Clears out buildup in the gut, improving absorption and elimination.
+              
+              Reduces bloating, gas, and constipation.
+              
+              <br>
+              4. Enhances Skin Clarity
 
 Fewer toxins in the body can lead to clearer skin, fewer breakouts, and a natural glow.
 
@@ -1045,27 +1011,27 @@ Detox can restore natural sleep rhythms and improve sleep quality.
 
 Detoxing isn't just physical—many experience emotional shifts, improved mood, and a sense of lightness and renewal.
 
-                </p>
-            </div>
-            <div id="potliShek" class="treatment-container">
-                <h2 class="treatment-title">पोटलीशेक </h2>
-                <img src="treantement images/POTLI SEK.jpg" alt="POTLI SEK">
-                <p class="treatment-description">
-                    Potli Sek/Sveda is a traditional Ayurvedic therapy where herbal pouches (potlis) filled with healing herbs are heated and massaged over the body. It's commonly used for pain relief, detox, and rejuvenation.
+          </p>
+      </div>
+      <div id="potliShek" class="treatment-container">
+          <h2 class="treatment-title">पोटलीशेक </h2>
+          <img src="treantement images/POTLI SEK.jpg" alt="POTLI SEK">
+          <p class="treatment-description">
+              Potli Sek/Sveda is a traditional Ayurvedic therapy where herbal pouches (potlis) filled with healing herbs are heated and massaged over the body. It's commonly used for pain relief, detox, and rejuvenation.
 
-                    Here are the key benefits of Potli Sek treatment:
-                    
-                    
+              Here are the key benefits of Potli Sek treatment:
+              
+              
+        <br>
+              
+              1. Relieves Muscle and Joint Pain
+              
+              Great for arthritis, spondylitis, frozen shoulder, and general body aches also
+              
+              Improves blood circulation and relaxes stiff muscles.
+              
               <br>
-                    
-                    1. Relieves Muscle and Joint Pain
-                    
-                    Great for arthritis, spondylitis, frozen shoulder, and general body aches also
-                    
-                    Improves blood circulation and relaxes stiff muscles.
-                    
-                    <br>
-                    2. Reduces Inflammation
+              2. Reduces Inflammation
 
 Herbal ingredients like turmeric, neem, or eucalyptus help reduce swelling and pain.
 
@@ -1114,72 +1080,72 @@ Particularly beneficial for those with chronic back pain or disc-related issues.
 
 Leaves the body feeling light, refreshed, and rejuvenated—good for regular wellness maintenance.
 
-                    
-                </p>
-            </div>
-           
-            <div id="PRISHTA_BASTI" class="treatment-container">
-                <h2 class="treatment-title">पृष्ट बस्ती </h2>
-                <img src="treantement images/PRISHTA BASTI.jpg" alt=" Prishta Basti">
-                <p class="treatment-description">
-                   
+              
+          </p>
+      </div>
+     
+      <div id="PRISHTA_BASTI" class="treatment-container">
+          <h2 class="treatment-title">पृष्ट बस्ती </h2>
+          <img src="treantement images/PRISHTA BASTI.jpg" alt=" Prishta Basti">
+          <p class="treatment-description">
+             
 
-                    Prishta Basti (also known as Pristha Vasti) is a specialized Ayurvedic therapy focusing on the upper and middle back. It involves retaining warm medicated oils within a dough ring placed over the spine. This treatment is designed to alleviate pain, reduce inflammation, and enhance spinal health. 
-                   
-                   Key Benefits of Prishta Basti
-                   <br>
-                   • Pain Relief and Inflammation Reduction:
-                   
-                   Effectively alleviates back pain and reduces inflammation in the spinal region.
-                   
-                   <br>
-                   • Improved Blood Circulation: Enhances
-                   
-                   blood flow to the spine, promoting healing and nourishment of spinal tissues.
-                   <br>
-                   • Muscle Relaxation: Relieves stiffness and spasms in the back muscles, improving flexibility and comfort.
-                   <br>
-                   Nourishment of Spinal Structures:
-                   
-                   Strengthens bones, ligaments, and nerves associated with the spine, supporting overall spinal health.
-                   <br>
-                   • Treatment of Specific Conditions:
-                   
-                   Beneficial for managing musculoskeletal disorders such as ankylosing spondylitis and post-traumatic injuries.
+              Prishta Basti (also known as Pristha Vasti) is a specialized Ayurvedic therapy focusing on the upper and middle back. It involves retaining warm medicated oils within a dough ring placed over the spine. This treatment is designed to alleviate pain, reduce inflammation, and enhance spinal health. 
+             
+             Key Benefits of Prishta Basti
+             <br>
+             • Pain Relief and Inflammation Reduction:
+             
+             Effectively alleviates back pain and reduces inflammation in the spinal region.
+             
+             <br>
+             • Improved Blood Circulation: Enhances
+             
+             blood flow to the spine, promoting healing and nourishment of spinal tissues.
+             <br>
+             • Muscle Relaxation: Relieves stiffness and spasms in the back muscles, improving flexibility and comfort.
+             <br>
+             Nourishment of Spinal Structures:
+             
+             Strengthens bones, ligaments, and nerves associated with the spine, supporting overall spinal health.
+             <br>
+             • Treatment of Specific Conditions:
+             
+             Beneficial for managing musculoskeletal disorders such as ankylosing spondylitis and post-traumatic injuries.
 <br>
 • Maintenance of Spinal Curvature: Helps
 
 in maintaining the natural curvature of the spine, preventing postural issues.
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="UTTARA_BASTI" class="treatment-container">
-                <h2 class="treatment-title">उत्तर बस्ती</h2>
-                <img src="treantement images/UTTARA BASTI.jpg" alt=" UTTARA BASTI">
-                <p class="treatment-description">
-                   
+      <div id="UTTARA_BASTI" class="treatment-container">
+          <h2 class="treatment-title">उत्तर बस्ती</h2>
+          <img src="treantement images/UTTARA BASTI.jpg" alt=" UTTARA BASTI">
+          <p class="treatment-description">
+             
 
-                    Uttara Basti is an important Ayurvedic Panchakarma therapy, primarily used to treat disorders of the reproductive and urinary systems. It involves the administration of medicated oils or decoctions into the uterus or urinary bladder through the vaginal or urethral route.
-                    
-                    Benefits of Uttar Basti
-                    
-                   <h3>1. For Women:</h3> 
-                    
-                    Improves fertility by enhancing the function of ovaries and uterus.
-                    <br>
-                    
-                    Regulates menstrual cycle and helps in treating disorders like:
-                    
-                    Amenorrhea (absence of menstruation),
-                    
-                    Dysmenorrhea (painful menstruation),
-                    
-                    Menorrhagia (heavy bleeding).
-                     <br>
-                    
-                    Treats uterine disorders like fibroids, endometriosis, and polycystic ovarian syndrome (PCOS).
-                    
-                    Helps with hormonal imbalances and supports overall reproductive health.
+              Uttara Basti is an important Ayurvedic Panchakarma therapy, primarily used to treat disorders of the reproductive and urinary systems. It involves the administration of medicated oils or decoctions into the uterus or urinary bladder through the vaginal or urethral route.
+              
+              Benefits of Uttar Basti
+              
+             <h3>1. For Women:</h3> 
+              
+              Improves fertility by enhancing the function of ovaries and uterus.
+              <br>
+              
+              Regulates menstrual cycle and helps in treating disorders like:
+              
+              Amenorrhea (absence of menstruation),
+              
+              Dysmenorrhea (painful menstruation),
+              
+              Menorrhagia (heavy bleeding).
+               <br>
+              
+              Treats uterine disorders like fibroids, endometriosis, and polycystic ovarian syndrome (PCOS).
+              
+              Helps with hormonal imbalances and supports overall reproductive health.
 
 Supports postpartum recovery and strengthens the uterus.
 
@@ -1214,29 +1180,29 @@ Detoxifies and rejuvenates the reproductive organs,
 Balances Vata and Pitta doshas in the pelvic region,
 
 Enhances the vitality (Ojas) of the individual.
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="DIET" class="treatment-container">
-                <h2 class="treatment-title">आहार</h2>
-                <img src="treantement images/DIET.jpg" alt="DIET">
-                <p class="treatment-description">
-                    1. Improved Energy Levels
-                    Balanced nutrition helps your body function efficiently, leading to more consistent energy throughout the day.
-                    <br>
-                    
-                    2. Better Mood and Mental Health
-                    Foods rich in omega-3s, complex carbs, and vitamins (like B12, D, and folate) can help regulate mood and reduce anxiety or depression.
-                    
-                    <br>
-                    3. Weight Management
-                    Eating whole foods in the right portions helps maintain a healthy weight and reduces the risk of obesity.
-                    <br>
-                    
-                    4. Disease Prevention
-                    A healthy diet can lower the risk of chronic diseases like heart disease, type 2 diabetes, high blood pressure, and certain cancers.
-                    <br>
-                    5. Improved Digestion
+      <div id="DIET" class="treatment-container">
+          <h2 class="treatment-title">आहार</h2>
+          <img src="treantement images/DIET.jpg" alt="DIET">
+          <p class="treatment-description">
+              1. Improved Energy Levels
+              Balanced nutrition helps your body function efficiently, leading to more consistent energy throughout the day.
+              <br>
+              
+              2. Better Mood and Mental Health
+              Foods rich in omega-3s, complex carbs, and vitamins (like B12, D, and folate) can help regulate mood and reduce anxiety or depression.
+              
+              <br>
+              3. Weight Management
+              Eating whole foods in the right portions helps maintain a healthy weight and reduces the risk of obesity.
+              <br>
+              
+              4. Disease Prevention
+              A healthy diet can lower the risk of chronic diseases like heart disease, type 2 diabetes, high blood pressure, and certain cancers.
+              <br>
+              5. Improved Digestion
 Fiber-rich foods (like fruits, vegetables, and whole grains) support gut health and help prevent constipation.
 <br>
 
@@ -1250,29 +1216,29 @@ Avoiding heavy, sugary, or processed foods before bed can improve sleep quality.
 
 8. Longer Life
 Studies link healthy eating habits with increased longevity and quality of life.
-                </p>
-            </div>
-            
-            <div id="RAKTAMOKSHAN" class="treatment-container">
-                <h2 class="treatment-title">रक्तमोक्षण</h2>
-                <img src="treantement images/RAKTAMOKSHAN.jpg" alt="RAKTAMOKSHAN">
-                <p class="treatment-description">
-                    Raktamokshan, or bloodletting, is one of the five Panchakarma therapies in Ayurveda. It's used to purify the blood and eliminate toxins, especially in disorders where vitiated blood (Dushta Rakta) is believed to be the root cause.
-                    
-                     <h3>Benefits of Raktamokshan:</h3>
-                    
-                    1. Purification of Blood
-                    It helps remove impure blood, improving circulation and overall blood quality.
-                     <br>
-                    
-                    2. Relief in Skin Disorders
-                    Effective in conditions like eczema, psoriasis, acne, urticaria, and boils by reducing inflammation and toxins.
-                    <br>
-                    
-                    3. Improves Liver Function
-                    By reducing blood impurities, it supports liver detoxification and function.
-                    <br>
-                    4. Reduces Pitta Disorders
+          </p>
+      </div>
+      
+      <div id="RAKTAMOKSHAN" class="treatment-container">
+          <h2 class="treatment-title">रक्तमोक्षण</h2>
+          <img src="treantement images/RAKTAMOKSHAN.jpg" alt="RAKTAMOKSHAN">
+          <p class="treatment-description">
+              Raktamokshan, or bloodletting, is one of the five Panchakarma therapies in Ayurveda. It's used to purify the blood and eliminate toxins, especially in disorders where vitiated blood (Dushta Rakta) is believed to be the root cause.
+              
+               <h3>Benefits of Raktamokshan:</h3>
+              
+              1. Purification of Blood
+              It helps remove impure blood, improving circulation and overall blood quality.
+               <br>
+              
+              2. Relief in Skin Disorders
+              Effective in conditions like eczema, psoriasis, acne, urticaria, and boils by reducing inflammation and toxins.
+              <br>
+              
+              3. Improves Liver Function
+              By reducing blood impurities, it supports liver detoxification and function.
+              <br>
+              4. Reduces Pitta Disorders
 Especially useful in Pitta-dominant imbalances such as nosebleeds, ulcers, or skin rashes.
 <br>
 
@@ -1290,41 +1256,41 @@ Primarily pacifies aggravated Pitta and Rakta (blood tissue) disorders.
 
 8. Improves Skin Glow
 With toxins removed, many people report clearer, healthier skin.  
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="RASAYANA_THERAPY" class="treatment-container">
-                <h2 class="treatment-title">रसायन</h2>
-                <img src="treantement images/RASAYANA THERAPY.jpg" alt=" RASAYANA THERAPY
-                ">
-                <p class="treatment-description">
-                   
-                    Rasayana therapy is a rejuvenation therapy in Ayurveda focused on promoting longevity, vitality, and overall wellness. The word Rasayana comes from "Rasa" (essence or plasma) and "Ayana" (path) – meaning the path to nourishing the essence of the body.
-                    <br>
-                   <h3> Benefits of Rasayana Therapy:</h3>
-                    <br>
-                    1. Anti-Aging Effects
-                    Slows down aging signs like wrinkles, greying hair, and reduced stamina. Enhances longevity and vitality.
-                    
-                    <br>
-                    2. Boosts Immunity (Vyadhikshamatva)
-                    Strengthens the immune system and helps prevent infections and recurrent diseases.
-                    
-                    <br>
-                    3. Improves Mental Clarity and Memory
-                    Enhances cognitive functions such as memory, concentration, and learning.
-                    
-                    <br>
-                    4. Enhances Energy and Stamina
-                    Increases physical strength and endurance, combats fatigue and weakness.
-                    
-                    <br>
-                    5. Improves Skin Health
-                    Promotes a glowing complexion, smooth skin, and prevents skin disorders.
-                    <br>
-                    
-                    6. Supports Sexual Health
-                    Helps in improving libido, fertility, and reproductive strength (Vrishya action).
+      <div id="RASAYANA_THERAPY" class="treatment-container">
+          <h2 class="treatment-title">रसायन</h2>
+          <img src="treantement images/RASAYANA THERAPY.jpg" alt=" RASAYANA THERAPY
+          ">
+          <p class="treatment-description">
+             
+              Rasayana therapy is a rejuvenation therapy in Ayurveda focused on promoting longevity, vitality, and overall wellness. The word Rasayana comes from "Rasa" (essence or plasma) and "Ayana" (path) – meaning the path to nourishing the essence of the body.
+              <br>
+             <h3> Benefits of Rasayana Therapy:</h3>
+              <br>
+              1. Anti-Aging Effects
+              Slows down aging signs like wrinkles, greying hair, and reduced stamina. Enhances longevity and vitality.
+              
+              <br>
+              2. Boosts Immunity (Vyadhikshamatva)
+              Strengthens the immune system and helps prevent infections and recurrent diseases.
+              
+              <br>
+              3. Improves Mental Clarity and Memory
+              Enhances cognitive functions such as memory, concentration, and learning.
+              
+              <br>
+              4. Enhances Energy and Stamina
+              Increases physical strength and endurance, combats fatigue and weakness.
+              
+              <br>
+              5. Improves Skin Health
+              Promotes a glowing complexion, smooth skin, and prevents skin disorders.
+              <br>
+              
+              6. Supports Sexual Health
+              Helps in improving libido, fertility, and reproductive strength (Vrishya action).
 
 <br>
 7. Strengthens the Body Tissues (Dhatus)
@@ -1341,40 +1307,40 @@ Ideal post-illness to restore strength and immunity.
 <br>
 10. Promotes Calmness and Mental Peace
 Rasayana herbs like Brahmi and Ashwagandha reduce stress and anxiety
-                    
-                </p>
-            </div>
+              
+          </p>
+      </div>
 
-            <div id="UDVARTHANAM" class="treatment-container">
-                <h2 class="treatment-title">उदवर्तन </h2>
-                <img src="treantement images/UDVARTHANAM.jpg" alt="Udvarthanam">
-                <p class="treatment-description">
-                    
+      <div id="UDVARTHANAM" class="treatment-container">
+          <h2 class="treatment-title">उदवर्तन </h2>
+          <img src="treantement images/UDVARTHANAM.jpg" alt="Udvarthanam">
+          <p class="treatment-description">
+              
 
-                    Udvarthanam is a traditional Ayurvedic dry or herbal powder massage therapy. It’s done using herbal powders or pastes, applied in an upward stroking motion, typically against the direction of hair growth. It’s especially recommended for Kapha imbalances, obesity, and skin-related concerns.
-                    <br>
-                   <h3>Benefits of Udvartan:</h3> 
-                    <br>
-                    1. Reduces Cellulite and Fat Deposits
-                    Helps break down subcutaneous fat and reduce body circumference, aiding in weight loss and inch loss.
-                    <br>
-                    
-                    2. Improves Skin Texture and Glow
-                    Exfoliates dead skin cells, clears clogged pores, and leaves skin soft, smooth, and radiant.
-                    <br>
-                    
-                    3. Enhances Blood Circulation
-                    The massage stimulates circulation, helping detoxify tissues and improve lymphatic drainage.
-                    <br>
-                    
-                    4. Balances Kapha Dosha
-                    Especially beneficial for those with sluggish metabolism, lethargy, or water retention.
-                    <br>
-                    
-                    5. Removes Body Odor and Excess Sweat
-                    Herbal powders absorb sweat and help neutralize body odor.
-                     <br>
-                    6. Improves Muscle Tone
+              Udvarthanam is a traditional Ayurvedic dry or herbal powder massage therapy. It’s done using herbal powders or pastes, applied in an upward stroking motion, typically against the direction of hair growth. It’s especially recommended for Kapha imbalances, obesity, and skin-related concerns.
+              <br>
+             <h3>Benefits of Udvartan:</h3> 
+              <br>
+              1. Reduces Cellulite and Fat Deposits
+              Helps break down subcutaneous fat and reduce body circumference, aiding in weight loss and inch loss.
+              <br>
+              
+              2. Improves Skin Texture and Glow
+              Exfoliates dead skin cells, clears clogged pores, and leaves skin soft, smooth, and radiant.
+              <br>
+              
+              3. Enhances Blood Circulation
+              The massage stimulates circulation, helping detoxify tissues and improve lymphatic drainage.
+              <br>
+              
+              4. Balances Kapha Dosha
+              Especially beneficial for those with sluggish metabolism, lethargy, or water retention.
+              <br>
+              
+              5. Removes Body Odor and Excess Sweat
+              Herbal powders absorb sweat and help neutralize body odor.
+               <br>
+              6. Improves Muscle Tone
 Regular therapy firms up sagging skin and improves the tone of muscles.
 <br>
 
@@ -1384,35 +1350,35 @@ Stimulates the digestive fire (Agni) and overall metabolic rate.
 
 8. Reduces Stress and Fatigue
 Has a stimulating and refreshing effect on the body and mind.
-                </p>
-            </div>
+          </p>
+      </div>
 
-            <div id="HRUD_BASTI" class="treatment-container">
-                <h2 class="treatment-title">ह्रदय बस्ती </h2>
-                <img src="treantement images/HRUD BASTI.jpg" alt=" HRUD BASTI">
-                <p class="treatment-description">
-                   
+      <div id="HRUD_BASTI" class="treatment-container">
+          <h2 class="treatment-title">ह्रदय बस्ती </h2>
+          <img src="treantement images/HRUD BASTI.jpg" alt=" HRUD BASTI">
+          <p class="treatment-description">
+             
 
-                    Hriday Basti (also known as Hrid Basti or Uro Basti) is a specialized Ayurvedic therapy where warm medicated oil or ghee is retained over the heart region (Hridaya) inside a dough ring made from black gram flour. It’s a deeply nourishing and calming treatment for both physical heart health and emotional well-being.
-                    <br>
-                    <h3>Key Benefits of Hriday Basti:</h3>
-                    <br>
-                    1. Supports Heart Health
-                    Nourishes cardiac muscles, improves circulation around the heart, and may help regulate blood pressure and heart rhythm.
-                    <br>
-                    
-                    2. Relieves Chest Pain (non-cardiac)
-                    Eases muscular or stress-related chest tightness and discomfort.
-                    <br>
-                    
-                    3. Reduces Stress and Anxiety
-                    Calms the mind and nervous system, making it especially useful in cases of anxiety, panic attacks, or emotional trauma.
-                    <br>
-                    
-                    4. Balances Vata Dosha in the Heart Region
-                    Pacifies aggravated Vata, which is often responsible for palpitations, irregular heartbeat, or emotional instability.
-                     <br>
-                     5. Improves Emotional Resilience
+              Hriday Basti (also known as Hrid Basti or Uro Basti) is a specialized Ayurvedic therapy where warm medicated oil or ghee is retained over the heart region (Hridaya) inside a dough ring made from black gram flour. It’s a deeply nourishing and calming treatment for both physical heart health and emotional well-being.
+              <br>
+              <h3>Key Benefits of Hriday Basti:</h3>
+              <br>
+              1. Supports Heart Health
+              Nourishes cardiac muscles, improves circulation around the heart, and may help regulate blood pressure and heart rhythm.
+              <br>
+              
+              2. Relieves Chest Pain (non-cardiac)
+              Eases muscular or stress-related chest tightness and discomfort.
+              <br>
+              
+              3. Reduces Stress and Anxiety
+              Calms the mind and nervous system, making it especially useful in cases of anxiety, panic attacks, or emotional trauma.
+              <br>
+              
+              4. Balances Vata Dosha in the Heart Region
+              Pacifies aggravated Vata, which is often responsible for palpitations, irregular heartbeat, or emotional instability.
+               <br>
+               5. Improves Emotional Resilience
 Helps release stored emotions in the heart area and promotes a sense of calm and contentment.
 <br>
 
@@ -1428,7 +1394,7 @@ Promotes deep relaxation, making it beneficial for those with disturbed sleep or
 Warm oil improves local circulation and helps nourish surrounding tissues.
 
 
- <h3>Best For:</h3>
+<h3>Best For:</h3>
 <br>
 People under high emotional or mental stress
 <br>
@@ -1438,30 +1404,30 @@ Individuals with anxiety, grief, or emotional burnout
 <br>
 Preventive heart care and rejuvenation
 
-  
-                </p>
-            </div>
 
-            <div id="KSHAR_SUTRA" class="treatment-container">
-                <h2 class="treatment-title">क्षारसुत्र</h2>
-                <img src="treantement images/KSHAR SUTRA.jpg" alt="क्षारसुत्र ">
-                <p class="treatment-description">
+          </p>
+      </div>
 
-                    Kshar Sutra Therapy – Ayurvedic Para-surgical Procedure
-                    
-                    Definition:
-                    Kshar Sutra is a minimally invasive Ayurvedic technique used primarily for the treatment of fistula-in-ano, piles (hemorrhoids), and other anorectal disorders. It involves the use of a specially medicated thread (Kshar Sutra) prepared with herbs like Apamarga Kshara, Snuhi latex, and Haridra (turmeric).
-                    
-                    Procedure:
-                    
-                    The medicated thread is carefully inserted into the fistulous tract or around the pile mass.
-                    
-                    It gradually cuts, drains, and heals the tract or tissue while delivering herbal medicine locally.
-                    
-                    The thread is changed weekly until complete healing.
-                    <br>
-                    <h3>Benefits of Kshar Sutra:</h3>
-                    <br>
+      <div id="KSHAR_SUTRA" class="treatment-container">
+          <h2 class="treatment-title">क्षारसुत्र</h2>
+          <img src="treantement images/KSHAR SUTRA.jpg" alt="क्षारसुत्र ">
+          <p class="treatment-description">
+
+              Kshar Sutra Therapy – Ayurvedic Para-surgical Procedure
+              
+              Definition:
+              Kshar Sutra is a minimally invasive Ayurvedic technique used primarily for the treatment of fistula-in-ano, piles (hemorrhoids), and other anorectal disorders. It involves the use of a specially medicated thread (Kshar Sutra) prepared with herbs like Apamarga Kshara, Snuhi latex, and Haridra (turmeric).
+              
+              Procedure:
+              
+              The medicated thread is carefully inserted into the fistulous tract or around the pile mass.
+              
+              It gradually cuts, drains, and heals the tract or tissue while delivering herbal medicine locally.
+              
+              The thread is changed weekly until complete healing.
+              <br>
+              <h3>Benefits of Kshar Sutra:</h3>
+              <br>
 
 1. Effective in Chronic Fistula and Piles:
 
@@ -1510,20 +1476,46 @@ Fewer side effects compared to conventional surgery.
 7. Gradual Cutting and Healing:
 
 The tract is cut slowly while simultaneously healing from behind, leaving minimal scarring.
-                    
-                     
-                </p>
-            </div>
-        </div>
-    </div>
+              
+               
+          </p>
+      </div>
+  </div>
+
+    
+    <!-- Contact and Appointment Buttons -->
+<div class="Contact" >
+  <!-- Call Button -->
+  <a href="tel:+918530912184">
+    📞 Contact Us
+  </a>
 
 
-    <footer>
-        <p>&copy; 2025 ASHAYURVED
-          SUPER SPECIALITY CLINIC. All Rights Reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
-        <p>Made with ❤️ by Saurav V Shinde</p>
-      </footer>
+
+
+</div>
+
+
+   
+  <script>
+    document.querySelectorAll(".treatment-links a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+  <!-- Floating Back to Index Button -->
+  <footer>
+    <p>&copy; 2025 ASHAYURVED
+      SUPER SPECIALITY CLINIC. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    <p>Made with ❤️ by Saurav V Shinde</p>
+  </footer>
 </body>
 </html>
+
 
